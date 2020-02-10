@@ -1,2 +1,2 @@
-* Installing Atomic Red Team
-* Running Tests
+* Installation
+* Execute Tests
