@@ -1,3 +1,2 @@
 Welcome to the invoke-atomicredteam wiki!
 
-__TOC__
