@@ -1,0 +1,3 @@
+Each atomic test definition defines whether the test is intended to be run on Windows, Linux or MacOS. However, there may be finer grained requirements for an atomic. For example, the atomic test may be intended for execution on a Domain Controller or Server rather than a Workstation. Other requirements (aka Prerequisites) may be that certain files or users exists and specific tools are installed.
+
+To if the system you are using meets the prerequistes required for each test, use the `-CheckPrereqs` switch before executing the test.
