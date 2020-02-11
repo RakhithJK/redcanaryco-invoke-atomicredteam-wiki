@@ -4,12 +4,9 @@ and can potentially be a resume-generating event.
 * Set up a test machine that would be similar to the build in your environment. Be sure you have your collection/EDR
 solution in place, and that the endpoint is checking in and active. It is best to have AV turned off.
 
-We made installing Atomic Red Team extremely easy.
+* You are responsible for understanding what a test does before executing it.
 
-For those running Atomic Red Team on MacOS or Linux download and install PowerShell Core.
-
-[Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-[MacOS](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+This execution framework (Invoke-AtomicRedTeam) work cross-platform on Windows, Linux and MacOS. However, to use it on Linux and Mac you must install PowerShell Core. See [Installing PowerShell Core on Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6) and [Installing PowerShell Core on MacOS](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6) for details.
 
 From a PowerShell prompt run the following command:
 
