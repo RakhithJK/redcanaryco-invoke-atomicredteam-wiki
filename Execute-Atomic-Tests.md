@@ -7,7 +7,7 @@ Before executing an atomic test you should have done the following:
 
 You may find it useful to [List Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/List-Atomic-Tests) before execution as well.
 
-#### Execute Specific Attacks (by Attack Number) for a Given Technique
+#### Execute Specific Attacks (by Atomic Test Number) for a Given Technique
 
 ```powershell
 Invoke-AtomicTest T1117 -TestNumbers 1, 2
@@ -25,7 +25,7 @@ $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\Users\
 
 Tip: Add this to your PowerShell profile so it is always set to your preferred default value.
 
-#### Execute Specific Attacks (by Attack Name) for a Given Technique
+#### Execute Specific Attacks (by Atomic Test Name) for a Given Technique
 
 ```powershell
 Invoke-AtomicTest T1117 -TestNames "Regsvr32 remote COM scriptlet execution","Regsvr32 local DLL execution"
