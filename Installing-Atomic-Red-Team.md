@@ -50,8 +50,8 @@ InstallPath
 - Where to install (default: C:\AtomicRedTeam on Windows or ~\AtomicRedteam on MacOS and Linux)
 
 ```powershell
-Install-AtomicRedTeam -InstallPath c:\tools\
-Install-AtomicsFolder -InstallPath c:\tools\
+Install-AtomicRedTeam -InstallPath "c:\tools"
+Install-AtomicsFolder -InstallPath "c:\tools"
 ```
 
 Force
