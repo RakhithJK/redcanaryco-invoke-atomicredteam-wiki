@@ -19,3 +19,5 @@ If you find that your system does not meet the prerequisites, you can use the `-
 ```Invoke-AtomicTest T1003 -TestName "Windows Credential Editor" -GetPrereqs```
 
 If this is successful, the output will indicate that the prerequisites are now successfully met. However, sometimes the output may indicate that the requirements will have to be met manually.
+
+**Note:**  You can still execute an attack even if the pre-requisites are not met but execution may fail.
