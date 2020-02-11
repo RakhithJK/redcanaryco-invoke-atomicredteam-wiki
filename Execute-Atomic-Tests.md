@@ -1,33 +1,16 @@
 ## Getting Started
 
-Before you can use the **_Invoke-AtomicTest_** function, you must first import the module:
+Before executing an atomic test you should have done the following:
+* [Installed Atomic Red Team](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Atomic-Red-Team)
+* [Imported the Module](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Import-the-Module)
+* [Checked Prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Check-or-Get-Prerequisites-for-Atomic-Tests)
+
+You may find it useful to [List Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/List-Atomic-Tests) before execution as well.
+
+#### Execute Specific Attacks (by Attack Number) for a Given Technique
 
 ```powershell
-Import-Module C:\AtomicRedTeam\execution-frameworks\Invoke-AtomicRedTeam\Invoke-AtomicRedTeam\Invoke-AtomicRedTeam.psm1
-```
-
-Note: Your path to the **_Invoke-AtomicRedTeam.psm1_** may be different.
-
-
-#### Display Test Details for the given Technique Number without Executing any Tests
-
-```powershell
-Invoke-AtomicTest T1089 -ShowDetails
-```
-
-Using the `ShowDetails` switch causes the test details to be printed to the screen and allows for easy copy and paste execution.
-Note: you may need to change the path where the test definitions are found with the `PathToAtomicsFolder` parameter.
-
-#### Display Only Test Names and Numbers
-
-```powershell
-Invoke-AtomicTest All -ShowDetailsBrief
-```
-
-#### Execute All Attacks for a Given Technique
-
-```powershell
-Invoke-AtomicTest T1117
+Invoke-AtomicTest T1117 -TestNumbers 1, 2
 ```
 
 This assumes your atomics folder is in the default location of `<BASEPATH>\AtomicRedTeam\atomics`
@@ -42,16 +25,16 @@ $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\Users\
 
 Tip: Add this to your PowerShell profile so it is always set to your preferred default value.
 
-#### Execute Specific Attacks (by Attack Number) for a Given Technique
-
-```powershell
-Invoke-AtomicTest T1117 -TestNumbers 1, 2
-```
-
 #### Execute Specific Attacks (by Attack Name) for a Given Technique
 
 ```powershell
 Invoke-AtomicTest T1117 -TestNames "Regsvr32 remote COM scriptlet execution","Regsvr32 local DLL execution"
+```
+
+#### Execute All Attacks for a Given Technique
+
+```powershell
+Invoke-AtomicTest T1117
 ```
 
 #### Speficy a Process Timeout
@@ -64,7 +47,7 @@ If the attack commands do not exit (return) within in the specified `-TimeoutSec
 
 #### Execute All Tests
 
-Execute all Atomic tests:
+This is not recommended but you can execute all Atomic tests in your atomics folder with the follwing:
 
 ```powershell
 Invoke-AtomicTest All
@@ -72,7 +55,7 @@ Invoke-AtomicTest All
 
 #### Execute All Tests from a Specific Directory
 
-Specify a path to atomics folder, example C:\AtomicRedTeam\atomics
+Specify a custom path to your atomics folder, example C:\AtomicRedTeam\atomics
 
 ```powershell
 Invoke-AtomicTest All -PathToAtomicsFolder C:\AtomicRedTeam\atomics
@@ -85,31 +68,6 @@ Invoke-AtomicTest T1117 -ExecutionLogPath 'C:\Temp\mylog.csv'
 ```
 
 By default, test execution details are written to `Invoke-AtomicTest-ExecutionLog.csv` in the current directory. Use the `-ExecutionLogPath` parameter to write to a different file. Execution is only logged in the execution log when the attack commands are run (not when `-ShowDetails` , `-CheckPrereqs`, `GetPrereqs`, or `-Cleanup` swiches are used). Use the `-NoExecutionLog` switch to not write execution details to disk.
-
-#### Check that Prerequistes for a given test are met
-
-```powershell
-Invoke-AtomicTest T1117 -TestNumber 1 -CheckPrereqs
-```
-
-For the "command_prompt", "bash", and "sh" executors, if any of the prereq_command's return a non-zero exit code, the pre-requisites are not met. Example: **fltmc.exe filters | findstr #{sysmon_driver}**
-
-For the "powershell" executor, the prereq_command's are run as a script block and the script must exit 0 if the pre-requisites are met. Example: **if(Test-Path C:\Windows\System32\cmd.exe) { exit 0 } else { exit 1 }**
-
-Pre-requisites will also be reported as not met if the test is defined with `elevation_required: true` but the current context is not elevated. You can still execute an attack even if the pre-requisites are not met but execution may fail.
-
-#### Get Prerequistes
-
-```powershell
-Invoke-AtomicTest T1117 -TestNumber 1 -GetPrereqs
-```
-
-This will run the "Get Prereq Commands" listed in the Dependencies section for the test.
-
-The execution framework provides a helpful PowerShell function called `Invoke-WebRequestVerifyHash` which only downloads and saves a file to disk if the file hash matches the specified value. Call this method by passing in the url of the file to download, the path where it should be saved, and lastly the expected Sha256 file hash.
-The function returns `$true` if the file was saved to disk, `$false` otherwise.
-
-Important Note: You must add the import of `Invoke-WebRequestVerifyHash.ps1` or the entire `Invoke-AtomicRedTeam.psm1` to your PowerShell profile to make this function available to the prereq commands.
 
 #### Specify Input Parameters on the Command Line
 
