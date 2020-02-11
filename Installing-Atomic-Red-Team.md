@@ -6,11 +6,11 @@ solution in place, and that the endpoint is checking in and active. It is best t
 
 * You are responsible for understanding what a test does before executing it.
 
-This execution framework (Invoke-AtomicRedTeam) work cross-platform on Windows, Linux and MacOS. However, to use it on Linux and Mac you must install PowerShell Core. See [Installing PowerShell Core on Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6) and [Installing PowerShell Core on MacOS](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6) for details.
+This execution framework (Invoke-AtomicRedTeam) works cross-platform on Windows, Linux and MacOS. However, to use it on Linux and Mac you must install PowerShell Core. See [Installing PowerShell Core on Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6) and [Installing PowerShell Core on MacOS](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6) for details.
 
-From a PowerShell prompt run the following command:
+To install the execution framework (Invoke-AtomicRedTeam) run the following command from a PowerShell prompt:
 
-`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/execution-frameworks/Invoke-AtomicRedTeam/install-atomicredteam.ps1'); Install-AtomicRedTeam -verbose`
+`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicRedTeam`
 
 If you get an Import-Module error stating that the module "cannot be loaded because running scripts is disabled on this system", restart powershell using "powershell -exec bypass" or bypass execution policy with one of [these](https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/) methods and try again. Method 12 is especially promising.
 
