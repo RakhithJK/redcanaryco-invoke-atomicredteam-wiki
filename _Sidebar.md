@@ -3,4 +3,5 @@
 * [List Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/List-Atomic-Tests)
 * [Check/Get Prerequisites for Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Check-or-Get-Prerequisites-for-Atomic-Tests)
 * [Execute Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests)
+* [specify Custom Input Arguments](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Specify-Custom-Input-Arguments)
 * [Cleanup after Atomic Tests]()
