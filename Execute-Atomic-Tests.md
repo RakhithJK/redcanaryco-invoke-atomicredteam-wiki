@@ -67,24 +67,7 @@ Invoke-AtomicTest All -PathToAtomicsFolder C:\AtomicRedTeam\atomics
 Invoke-AtomicTest T1117 -ExecutionLogPath 'C:\Temp\mylog.csv'
 ```
 
-By default, test execution details are written to `Invoke-AtomicTest-ExecutionLog.csv` in the current directory. Use the `-ExecutionLogPath` parameter to write to a different file. Execution is only logged in the execution log when the attack commands are run (not when `-ShowDetails` , `-CheckPrereqs`, `GetPrereqs`, or `-Cleanup` swiches are used). Use the `-NoExecutionLog` switch to not write execution details to disk.
-
-#### Specify Input Parameters on the Command Line
-
-```powershell
-$myArgs = @{ "file_name" = "c:\Temp\myfile.txt"; "ads_filename" = "C:\Temp\ads-file.txt"  }
-Invoke-AtomicTest T1158 -TestNames "Create ADS command prompt" -InputArgs $myArgs
-```
-
-You can specify a subset of the input parameters via the command line. Any input parameters not explicitly defined will maintain their default values from the test definition yaml.
-
-#### Run the Cleanup Commands For the Specified Test
-
-```powershell
-Invoke-AtomicTest T1089 -TestNames "Uninstall Sysmon" -Cleanup
-```
-
-## Additional Examples
+By default, test execution details are written to `Invoke-AtomicTest-ExecutionLog.csv` in the current directory. Use the `-ExecutionLogPath` parameter to write to a different file. Execution is only logged in the execution log when the attack commands are run (not when `-ShowDetails` , `-CheckPrereqs`, `GetPrereqs`, or `-Cleanup` switches are used). Use the `-NoExecutionLog` switch to not write execution details to disk.
 
 #### Confirm
 
