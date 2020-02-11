@@ -35,34 +35,21 @@ If you would like to install the atomics folder as a separate step or at a later
 Both the Install-AtomicRedTeam and the Install-AtomicsFolder functions have the following optional parameters:
 
 InstallPath
-- Where ART is to be Installed (default: C:\AtomicRedTeam on Windows or ~\AtomicRedteam on MacOS and Linux)
+- Where to install (default: C:\AtomicRedTeam on Windows or ~\AtomicRedteam on MacOS and Linux)
 
     `Install-AtomicRedTeam -InstallPath c:\tools\`
 
 Force
-- Force the new installation removing any previous installations in -InstallPath. **BE CAREFUL this will delete the entire install path folder**
+- Remove the previous installation before installing
 
 	`Install-AtomicRedTeam -Force`
 
 RepoOwner
-- Install ART from another repo. Default RepoOwner is "redcanaryco"
+- Installfrom another GitHub repo. Default RepoOwner is "redcanaryco"
 
 	`Install-AtomicRedTeam -RepoOwner clr2of8`
 
 Branch
-- Install ART from another branch. Default Branch is "master"
+- Install from another branch. Default Branch is "master"
 
 	`Install-AtomicRedTeam -RepoOwner clr2of8 -Branch start-process-branch`
-
-### Manual (Offline) Installation
-
-
-`set-executionpolicy Unrestricted`
-
-[PowerShell-Yaml](https://github.com/cloudbase/powershell-yaml) is required to parse Atomic yaml files:
-
-`Install-Module -Name powershell-yaml -Scope CurrentUser`
-
-Clone the Atomic Red Team repository and import the Invoke-AtomicRedTeam module.
-
-`import-module .\Invoke-AtomicRedTeam\Invoke-AtomicRedTeam.psm1`
