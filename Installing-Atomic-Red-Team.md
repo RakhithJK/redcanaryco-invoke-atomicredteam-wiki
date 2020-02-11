@@ -16,7 +16,7 @@ Installing the execution framework (Invoke-AtomicRedTeam) does not download the 
 
 ## Install Execution Framework and Atomics Folder
 
-The [Atomics Folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics) contains the test definitions, the commands that the execution framework will execute. If you would like to install the atomics folder at the same time that you install the execution framework, you can do this by adding the `-getAtomics` switch during the install of the execution framework.
+The [Atomics Folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics) contains the test definitions; the commands that the execution framework will execute. If you would like to install the atomics folder at the same time that you install the execution framework, you can do this by adding the `-getAtomics` switch during the install of the execution framework.
 
 `IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics`
 
