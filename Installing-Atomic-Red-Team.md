@@ -66,14 +66,14 @@ RepoOwner
 - Install from another GitHub repo. Default RepoOwner is "redcanaryco"
 
 ```powershell
-Install-AtomicRedTeam -RepoOwner clr2of8
-Install-AtomicsFolder -RepoOwner clr2of8
+Install-AtomicRedTeam -RepoOwner "clr2of8"
+Install-AtomicsFolder -RepoOwner "clr2of8"
 ```
 
 Branch
 - Install from another branch. Default Branch is "master"
 
 ```powershell
-Install-AtomicRedTeam -RepoOwner clr2of8 -Branch start-process-branch
-Install-AtomicsFolder -RepoOwner clr2of8 -Branch start-process-branch
+Install-AtomicRedTeam -RepoOwner "clr2of8" -Branch "start-process-branch"
+Install-AtomicsFolder -RepoOwner "clr2of8" -Branch "start-process-branch"
 ```
