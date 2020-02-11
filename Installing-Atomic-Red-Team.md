@@ -4,7 +4,7 @@ This execution framework (Invoke-AtomicRedTeam) works cross-platform on Windows,
 
 To install the execution framework (Invoke-AtomicRedTeam) run the following command from a PowerShell prompt:
 
-`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicRedTeam`
+`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); Install-AtomicRedTeam`
 
 If you get an Import-Module error stating that the module "cannot be loaded because running scripts is disabled on this system", restart powershell using `powershell -exec bypass` or bypass execution policy with one of [these](https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/) methods and try again. Method 12 is especially promising.
 
