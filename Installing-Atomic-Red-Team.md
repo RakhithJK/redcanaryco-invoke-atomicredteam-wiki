@@ -14,9 +14,9 @@ Where `<BASEPATH>` is `C:` in Windows or `~` in Linux/MacOS
 
 Installing the execution framework (Invoke-AtomicRedTeam) does not download the repository of atomic test definitions by default (aka the [Atomics Folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics)). This is because the atomics folder contains many files likely to trigger AV alerts on the endpoint. You may choose to white-list the install directory (`<BASEPATH>\AtomicRedTeam` by default) so that files are not quarantined or removed. Or you may choose to copy a version of the atomics folder over to the system that contains only the tests you intend to run.
 
-# Install Execution Framework and Atomics Folder (contains test definitions)
+# Install Execution Framework and Atomics Folder
 
-If you would like to install the atomics folder, containing all atomic test definitions at the same time you install the execution framework, you can do this by adding the `-getAtomics` switch during the install of the execution framework.
+The [Atomics Folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics) contains the test definitions, the commands that the execution framework will execute. If you would like to install the atomics folder at the same time that you install the execution framework, you can do this by adding the `-getAtomics` switch during the install of the execution framework.
 
 `IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics`
 
@@ -29,6 +29,8 @@ If the execution framework or the atomics folder are already found on disk you m
 If you would like to install the atomics folder as a separate step or at a later time, you can do it with the `Install-AtomicsFolder` function as follows.
 
 `IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicsFolder`
+
+# Optional Installation Parameters
 
 Both the Install-AtomicRedTeam and the Install-AtomicsFolder functions have the following optional parameters:
 
