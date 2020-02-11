@@ -5,7 +5,7 @@ This execution framework (Invoke-AtomicRedTeam) works cross-platform on Windows,
 To install the execution framework (Invoke-AtomicRedTeam) run the following command from a PowerShell prompt:
 
 ```powershell
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); ` 
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); `
 Install-AtomicRedTeam
 ```
 
