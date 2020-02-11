@@ -19,7 +19,7 @@ Where `<BASEPATH>` is `C:` in Windows or `~` in Linux/MacOS
 
 You can override the default path to the atomics folder using the `$PSDefaultParameterValues` preference variable as shown below.
 
-```
+```powershell
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\Users\myuser\Documents\code\atomic-red-team\atomics"}
 ```
 
