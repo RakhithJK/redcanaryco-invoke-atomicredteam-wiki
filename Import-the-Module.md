@@ -12,3 +12,10 @@ Note: If you installed AtomicRedTeam to a different path, you would need to adju
 
 If you would like to ensure that the `Invoke-AtomicTest` functionality is always available, without having to manually import the module first, you can add the import statement to your PowerShell profile. See the Microsoft documentation for [how to use PowerShell profiles](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7).
 
+Here is an example profile to import the module at startup and to set the default `-PathToAtomicsFolder`.
+
+```powershell
+Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psm1" -Force
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\AtomicRedTeam\atomics"}
+cd C:\users\art-user
+```
