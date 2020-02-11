@@ -51,6 +51,7 @@ InstallPath
 
 ```powershell
 Install-AtomicRedTeam -InstallPath c:\tools\
+Install-AtomicsFolder -InstallPath c:\tools\
 ```
 
 Force
@@ -58,13 +59,15 @@ Force
 
 ```powershell
 Install-AtomicRedTeam -Force
+Install-AtomicsFolder -Force
 ```
 
 RepoOwner
-- Installfrom another GitHub repo. Default RepoOwner is "redcanaryco"
+- Install from another GitHub repo. Default RepoOwner is "redcanaryco"
 
 ```powershell
 Install-AtomicRedTeam -RepoOwner clr2of8
+Install-AtomicsFolder -RepoOwner clr2of8
 ```
 
 Branch
@@ -72,4 +75,5 @@ Branch
 
 ```powershell
 Install-AtomicRedTeam -RepoOwner clr2of8 -Branch start-process-branch
+Install-AtomicsFolder -RepoOwner clr2of8 -Branch start-process-branch
 ```
