@@ -5,7 +5,7 @@ This execution framework (Invoke-AtomicRedTeam) works cross-platform on Windows,
 To install the execution framework (Invoke-AtomicRedTeam) run the following command from a PowerShell prompt:
 
 ```powershell
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); `
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1')
 Install-AtomicRedTeam
 ```
 
@@ -22,13 +22,15 @@ Installing the execution framework (Invoke-AtomicRedTeam) does not download the 
 The [Atomics Folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics) contains the test definitions; the commands that the execution framework will execute. If you would like to install the atomics folder at the same time that you install the execution framework, you can do this by adding the `-getAtomics` switch during the install of the execution framework.
 
 ```powershell
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1')
+Install-AtomicRedTeam -getAtomics
 ```
 
 If the execution framework or the atomics folder are already found on disk you must use the `-Force` parameter during install as follows to erase and replace these folders.
 
 ```powershell
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics -Force
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1')
+Install-AtomicRedTeam -getAtomics -Force
 ```
 
 ## Install Atomics Folder Only
@@ -36,7 +38,8 @@ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com
 If you would like to install the atomics folder as a separate step or at a later time, you can do it with the `Install-AtomicsFolder` function as follows.
 
 ```powershell
-IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicsFolder
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1')
+Install-AtomicsFolder
 ```
 
 ## Optional Installation Parameters
