@@ -8,7 +8,7 @@ Use the `-ShowDetailsBrief` switch to list the tests available for a given techn
 
 If you would like to show details for all techniques, you can use "All" as the technique number.
 
-```Invoke-AtomicTest T1003 -ShowDetailsBrief```
+```Invoke-AtomicTest All -ShowDetailsBrief```
 
 Showing the brief details is an easy way to identify the atomic test number associated with each test, which can later be used to specify individual test to execute.
 
