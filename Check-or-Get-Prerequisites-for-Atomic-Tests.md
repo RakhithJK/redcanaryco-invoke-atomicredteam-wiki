@@ -4,7 +4,8 @@ Each atomic test definition defines whether the test is intended to be run on Wi
 
 To check if the system you are using meets the prerequisites required for each test, use the `-CheckPrereqs` switch before executing the test.
 
-```Invoke-AtomicTest T1003 -TestName "Windows Credential Editor" -CheckPrereqs```
+```powershell
+Invoke-AtomicTest T1003 -TestName "Windows Credential Editor" -CheckPrereqs```
 
 The command above checks that the system meets the prerequisites for running the "Windows Credential Editor" test under Technique 1003. If the output includes **[*] Elevation required but not provided**, you need to run the command from an elevated command prompt.
 
