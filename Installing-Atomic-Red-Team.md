@@ -20,17 +20,21 @@ Installing the execution framework (Invoke-AtomicRedTeam) does not download the 
 
 The [Atomics Folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics) contains the test definitions; the commands that the execution framework will execute. If you would like to install the atomics folder at the same time that you install the execution framework, you can do this by adding the `-getAtomics` switch during the install of the execution framework.
 
-`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics`
+```powershellIEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics
+```
 
 If the execution framework or the atomics folder are already found on disk you must use the `-Force` parameter during install as follows to erase and replace these folders.
 
-`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics -Force`
+```powershell
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics -Force
+```
 
 ## Install Atomics Folder Only
 
 If you would like to install the atomics folder as a separate step or at a later time, you can do it with the `Install-AtomicsFolder` function as follows.
 
-`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicsFolder`
+```powershellIEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicsFolder
+```
 
 ## Optional Installation Parameters
 
@@ -39,7 +43,8 @@ Both the Install-AtomicRedTeam and the Install-AtomicsFolder functions have the 
 InstallPath
 - Where to install (default: C:\AtomicRedTeam on Windows or ~\AtomicRedteam on MacOS and Linux)
 
-    `Install-AtomicRedTeam -InstallPath c:\tools\`
+    ```powershell
+Install-AtomicRedTeam -InstallPath c:\tools\```
 
 Force
 - Remove the previous installation before installing
