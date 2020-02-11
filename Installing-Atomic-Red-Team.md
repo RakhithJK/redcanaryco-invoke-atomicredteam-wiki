@@ -45,21 +45,27 @@ Both the Install-AtomicRedTeam and the Install-AtomicsFolder functions have the 
 InstallPath
 - Where to install (default: C:\AtomicRedTeam on Windows or ~\AtomicRedteam on MacOS and Linux)
 
-    ```powershell
+```powershell
 Install-AtomicRedTeam -InstallPath c:\tools\
 ```
 
 Force
 - Remove the previous installation before installing
 
-	`Install-AtomicRedTeam -Force`
+```powershell
+Install-AtomicRedTeam -Force
+```
 
 RepoOwner
 - Installfrom another GitHub repo. Default RepoOwner is "redcanaryco"
 
-	`Install-AtomicRedTeam -RepoOwner clr2of8`
+```powershell
+Install-AtomicRedTeam -RepoOwner clr2of8
+```
 
 Branch
 - Install from another branch. Default Branch is "master"
 
-	`Install-AtomicRedTeam -RepoOwner clr2of8 -Branch start-process-branch`
+```powershell
+Install-AtomicRedTeam -RepoOwner clr2of8 -Branch start-process-branch
+```
