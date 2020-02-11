@@ -21,3 +21,10 @@ If you find that your system does not meet the prerequisites, you can use the `-
 If this is successful, the output will indicate that the prerequisites are now successfully met. However, sometimes the output may indicate that the requirements will have to be met manually.
 
 **Note:**  You can still execute an attack even if the pre-requisites are not met but execution may fail.
+
+# Special Invoke-WebRequestVerifyHash Function
+
+The execution framework provides a helpful PowerShell function called `Invoke-WebRequestVerifyHash` which only downloads and saves a file to disk if the file hash matches the specified value. Call this method by passing in the url of the file to download, the path where it should be saved, and lastly the expected Sha256 file hash.
+The function returns `$true` if the file was saved to disk, `$false` otherwise.
+
+Important Note: You must add the import of `Invoke-WebRequestVerifyHash.ps1` or the entire `Invoke-AtomicRedTeam.psm1` to your PowerShell profile to make this function available to the prereq commands.
