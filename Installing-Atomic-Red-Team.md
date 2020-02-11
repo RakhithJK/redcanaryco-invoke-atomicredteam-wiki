@@ -1,11 +1,3 @@
-* Be sure to get permission and necessary approval before conducting tests. Unauthorized testing is a bad decision
-and can potentially be a resume-generating event.
-
-* Set up a test machine that would be similar to the build in your environment. Be sure you have your collection/EDR
-solution in place, and that the endpoint is checking in and active. It is best to have AV turned off.
-
-* You are responsible for understanding what a test does before executing it.
-
 This execution framework (Invoke-AtomicRedTeam) works cross-platform on Windows, Linux and MacOS. However, to use it on Linux and Mac you must install PowerShell Core. See [Installing PowerShell Core on Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6) and [Installing PowerShell Core on MacOS](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6) for details.
 
 To install the execution framework (Invoke-AtomicRedTeam) run the following command from a PowerShell prompt:
@@ -18,17 +10,26 @@ By default, the installer will download and Install Atomic Red Team to `<BASEPAT
 
 Where `<BASEPATH>` is `C:` in Windows or `~` in Linux/MacOS
 
-Running the [Install script](install-atomicredteam.ps1) locally provides three parameters:
+Installing the execution framework (Invoke-AtomicRedTeam) does not download the repository of atomic test definitions by default (aka the [Atomics Folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics)). This is because the atomics folder contains many files likely to trigger AV alerts on the endpoint. You may choose to white-list the install directory (`<BASEPATH>\AtomicRedTeam` by default) so that files are not quarantined or removed. Or you may choose to copy a version of the atomics folder over to the system that contains only the tests you intend to run.
+
+If you would like to install the atomics folder, containing all atomic test definitions at the same time you install the execution framework, you can do this by adding the `-getAtomics` switch during the install of the execution framework.
+
+`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics`
+
+If the execution framework or the atomics folder are already found on disk you must use the `-Force` parameter during install as follows to erase and replace these folders.
+
+`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicRedTeam -getAtomics -Force`
+
+If you would like to install the atomics folder as a separate step or at a later time, you can do it with the `Install-AtomicsFolder` function as follows.
+
+`IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/install-atomicredteam.ps1'); Install-AtomicsFolder`
+
+Both the Install-AtomicRedTeam and the Install-AtomicsFolder functions have the following optional parameters:
 
 InstallPath
-- Where ART is to be Installed
+- Where ART is to be Installed (default: C:\AtomicRedTeam on Windows or ~\AtomicRedteam on MacOS and Linux)
 
     `Install-AtomicRedTeam -InstallPath c:\tools\`
-
-DownloadPath
-- Where ART is to be downloaded
-
-    `Install-AtomicRedTeam -DownloadPath c:\tools\`
 
 Force
 - Force the new installation removing any previous installations in -InstallPath. **BE CAREFUL this will delete the entire install path folder**
@@ -45,7 +46,7 @@ Branch
 
 	`Install-AtomicRedTeam -RepoOwner clr2of8 -Branch start-process-branch`
 
-### Manual Installation
+### Manual (Offline) Installation
 
 
 `set-executionpolicy Unrestricted`
