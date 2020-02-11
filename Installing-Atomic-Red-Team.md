@@ -1,5 +1,3 @@
-### Install Atomic Red Team
-
 * Be sure to get permission and necessary approval before conducting tests. Unauthorized testing is a bad decision
 and can potentially be a resume-generating event.
 
