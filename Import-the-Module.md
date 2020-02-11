@@ -2,7 +2,9 @@
 
 In order make the `Invoke-AtomicTest` function available for use in your current PowerShell session you must import the module. This is done automatically for you in the PowerShell window where you installed the execution framework, but in the event that you start a new PowerShell window, you will need to re-import the module which can be done as follows.
 
-```Import-Module C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psm1 -Force```
+```powershell
+Import-Module C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psm1 -Force
+```
 
 Note: If you installed AtomicRedTeam to a different path, you would need to adjust this command accordingly.
 
