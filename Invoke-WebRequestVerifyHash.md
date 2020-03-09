@@ -8,4 +8,4 @@ Invoke-WebRequestVerifyHash $url $outfile $hash
 
 The function returns `$true` if the file was saved to disk, `$false` otherwise. See the ["Windows Credential Editor" test](https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003/T1003.md#atomic-test-3---windows-credential-editor) under T1003 for example usage.
 
-We recommend you use the function to validate the file hash when the download location is not a Github "[Permanent Link](https://help.github.com/en/github/managing-files-in-a-repository/getting-permanent-links-to-files)", or the download location is not widely recognized as trusted. An example download source that is arguably trusted is the Microsoft SysInternals download site.
+We recommend you use the function to validate the file hash when the download location is not a Github "[Permanent Link](https://help.github.com/en/github/managing-files-in-a-repository/getting-permanent-links-to-files)", or the download location is not widely recognized as trusted. An example download source that is arguably trusted, an could forego the verify hash check, is the Microsoft SysInternals download site.
