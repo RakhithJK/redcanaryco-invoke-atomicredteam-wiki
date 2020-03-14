@@ -58,7 +58,7 @@ $sess = New-PSSession -ComputerName testcomputer -Credential domain\username
 
 In the example above, substitute "testcomputer" with the name of the remote computer and "domain\username" with the domain (if applicable) and username of a user with administrative access on the remote machine. When you execute this command, a dialog box will appear and prompt you to enter the password for the specified user.
 
-Now that you have a persistent session named `$sess` established, you can use `Invoke-AtomicTest` with the `-Session` parameter to cause the execution to occur on the remote machine.
+Now that you have a persistent session established (`$sess`), you can use it with the `Invoke-AtomicTest` function to cause execution to occur on the remote machine.
 
 ```powershell
 # Install any required prerequisites on the remote machine before test execution
