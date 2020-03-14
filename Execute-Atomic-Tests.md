@@ -49,7 +49,7 @@ If the attack commands do not exit (return) within in the specified `-TimeoutSec
 
 #### Execute test on a Remote Windows Machine through a PowerShell Session
 
-To execute an atomic test on a remote Windows machine, you must first establish a PowerShell Session as follows. Ensure the PowerShell remoting is enabled on the remote machine before you start. See the [Enabled-PSRemoting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7) commandlet for details.
+To execute an atomic test on a remote Windows machine, you must first establish a PowerShell Session as follows. Ensure that PowerShell remoting is enabled on the remote machine before you start. See the [Enabled-PSRemoting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7) commandlet for details.
 
 ```powershell
 # example session establishment to a computer named 'testcomputer'
