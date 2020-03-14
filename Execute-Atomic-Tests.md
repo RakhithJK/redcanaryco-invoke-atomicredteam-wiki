@@ -58,7 +58,7 @@ $sess = New-PSSession -ComputerName testcomputer -Credential domain\username
 
 In the example above, substitute "testcomputer" with the name of the remote computer and "domain\username" with the domain (if applicable) and username of a user with administrative access on the remote machine. When you execute this command, a dialog box will appear and prompt you to enter the password for the specified user.
 
-Now you have a persistent session named `$sess` established, you can use `Invoke-AtomicTest` with the `-Session` parameter to cause the execution to occur on the remote machine.
+Now that you have a persistent session named `$sess` established, you can use `Invoke-AtomicTest` with the `-Session` parameter to cause the execution to occur on the remote machine.
 
 ```powershell
 # Install any required prerequisites on the remote machine before test execution
@@ -67,6 +67,8 @@ Invoke-AtomicTest T1117 -Session $sess -GetPrereqs
 # execute all atomic tests in technique T1117 on a remote machine
 Invoke-AtomicTest T1117 -Session $sess
 ```
+
+Note that for remote execution the `PathToAtomicsFolder` always starts with $env:Temp, whereas for a local machine it typically starts with C:\AtomicRedTeam.
 
 #### Execute All Tests
 
