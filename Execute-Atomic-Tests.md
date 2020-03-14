@@ -1,3 +1,5 @@
+You can use the `Invoke-AtomicTest` function to run an atomic test on the system where you installed Atomic Red Team or on a remote machine through a [PowerShell Remoting](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/running-remote-commands?view=powershell-7#windows-powershell-remoting) session.
+
 #### Getting Started
 
 Before executing an atomic test you should have done the following:
