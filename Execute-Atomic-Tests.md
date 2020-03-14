@@ -39,13 +39,30 @@ Invoke-AtomicTest T1117 -TestNames "Regsvr32 remote COM scriptlet execution","Re
 Invoke-AtomicTest T1117
 ```
 
-#### Speficy a Process Timeout
+#### Specify a Process Timeout
 
 ```powershell
 Invoke-AtomicTest T1117 -TimeoutSeconds 15
 ```
 
 If the attack commands do not exit (return) within in the specified `-TimeoutSeconds`, the process and it's children will be forcefully terminated. The default value of `-TimeoutSeconds` is 120. This allows the `Invoke-AtomicTest` script to move on to the next test.
+
+#### Execute test on a Remote Windows Machine through a PowerShell Session
+
+To execute an atomic test on a remote Windows machine, you must first establish a PowerShell Session as follows. Ensure the PowerShell remoting is enabled on the remote machine before you start. See the [Enabled-PSRemoting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7) commandlet for details.
+
+```powershell
+# example session establishment to a computer named 'testcomputer'
+$sess = New-PSSession -ComputerName testcomputer -Credential domain\username
+```
+
+In the example above, substitute "testcomputer" with the name of the remote computer and "domain\username" with the domain (if applicable) and username of a user with administrative access on the remote machine. When you execute this command, a dialog box will appear and prompt you to enter the password for the specified user.
+
+Now you have a persistent session named `$sess` established, you can use `Invoke-AtomicTest` with the `-Session` parameter to cause the execution to occur on the remote machine.
+
+```powershell
+Invoke-AtomicTest T1117 -Session $sess
+```
 
 #### Execute All Tests
 
