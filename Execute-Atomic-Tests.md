@@ -1,4 +1,4 @@
-## Getting Started
+#### Getting Started
 
 Before executing an atomic test you should have done the following:
 * [Installed Atomic Red Team](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Atomic-Red-Team)
@@ -10,7 +10,7 @@ You may find it useful to [List Atomic Tests](https://github.com/redcanaryco/inv
 #### Execute Specific Attacks (by Atomic Test Number) for a Given Technique
 
 ```powershell
-Invoke-AtomicTest T1117 -TestNumbers 1, 2
+Invoke-AtomicTest T1117 -TestNumbers 1,2
 ```
 
 This assumes your atomics folder is in the default location of `<BASEPATH>\AtomicRedTeam\atomics`
