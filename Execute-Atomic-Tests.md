@@ -61,13 +61,13 @@ Specify a custom path to your atomics folder, example C:\AtomicRedTeam\atomics
 Invoke-AtomicTest All -PathToAtomicsFolder C:\AtomicRedTeam\atomics
 ```
 
-#### Specify an Alternate Path for the Execution Log
+#### Specify an Alternate Path\Filename for the Execution Log
 
 ```powershell
 Invoke-AtomicTest T1117 -ExecutionLogPath 'C:\Temp\mylog.csv'
 ```
 
-By default, test execution details are written to `Invoke-AtomicTest-ExecutionLog.csv` in the current directory. Use the `-ExecutionLogPath` parameter to write to a different file. Execution is only logged in the execution log when the attack commands are run (not when `-ShowDetails` , `-CheckPrereqs`, `GetPrereqs`, or `-Cleanup` switches are used). Use the `-NoExecutionLog` switch to not write execution details to disk.
+By default, test execution details are written to `Invoke-AtomicTest-ExecutionLog.csv` in the tmp directory. Use the `-ExecutionLogPath` parameter to write to a different file. Execution is only logged when the attack commands are run (not when the `-ShowDetails` , `-CheckPrereqs`, `GetPrereqs`, or `-Cleanup` switches are used). Use the `-NoExecutionLog` switch to not write execution details to disk.
 
 #### Confirm
 
