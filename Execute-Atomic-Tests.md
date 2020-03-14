@@ -61,6 +61,10 @@ In the example above, substitute "testcomputer" with the name of the remote comp
 Now you have a persistent session named `$sess` established, you can use `Invoke-AtomicTest` with the `-Session` parameter to cause the execution to occur on the remote machine.
 
 ```powershell
+# Install any required prerequisites on the remote machine before test execution
+Invoke-AtomicTest T1117 -Session $sess -GetPrereqs
+
+# execute all atomic tests in technique T1117 on a remote machine
 Invoke-AtomicTest T1117 -Session $sess
 ```
 
