@@ -1,0 +1,1 @@
+Questions? Get connected to the community on the [Atomic Red Team Slack channel](https://slack.atomicredteam.io/)
