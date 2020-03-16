@@ -1,6 +1,6 @@
 * [Installation](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Atomic-Red-Team)
 * [Import the Module](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Import-the-Module)
-* [List Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/List-Atomic-Tests)
+* [List Atomic Tests (Local)](https://github.com/redcanaryco/invoke-atomicredteam/wiki/List-Atomic-Tests)
 * [Check/Get Prerequisites for Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Check-or-Get-Prerequisites-for-Atomic-Tests)
 * [Execute Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests)
 * [Specify Custom Input Arguments](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Specify-Custom-Input-Arguments)
