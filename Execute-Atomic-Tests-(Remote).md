@@ -11,6 +11,13 @@ To execute an atomic test on a remote machine, from a local machine where Invoke
 #### Enable PS Remoting
 
 If your Local and Remote machines are both Windows OS, you simply need to enable PS Remoting on the Remote machine.
-Instructions to enable PS Remoting can be found [here](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7)
-Note: see the "-SkipNetworkProfileCheck" option if your client is on a public network
+Instructions to enable PS Remoting can be found [here](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7).
+
+**Note:** see the "-SkipNetworkProfileCheck" option if your client is on a public network
+
+By default, only users in the Adminstrators group on the Remote machine can make a PS Remoting connection.
+
+#### Installing PowerShell Core
+
+PowerShell Core 
 
