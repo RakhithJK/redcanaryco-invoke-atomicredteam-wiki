@@ -6,5 +6,5 @@ You can use the `Invoke-AtomicTest` function to run an atomic test on the system
 
 To execute an atomic test on a remote machine, from a local machine where Invoke-AtomicTest is installed, the following prerequisites must be met.
 
-![image](https://user-images.githubusercontent.com/22311332/76806775-fa043300-67a7-11ea-9aaf-9803e204f01b.png)
+![image](https://user-images.githubusercontent.com/22311332/76806831-23bd5a00-67a8-11ea-8feb-09faf0e6f96a.png)
 
