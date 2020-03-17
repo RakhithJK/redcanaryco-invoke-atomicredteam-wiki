@@ -9,7 +9,7 @@ IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com
 Install-AtomicRedTeam
 ```
 
-If you get an Import-Module error stating that the module "cannot be loaded because running scripts is disabled on this system", restart powershell using `powershell -exec bypass` or bypass execution policy with one of [these](https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/) methods and try again. Method 12 is especially promising.
+If you get an `Import-Module` error stating that the module "cannot be loaded because running scripts is disabled on this system", restart powershell using `powershell -exec bypass` or bypass execution policy with one of [these](https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/) methods and try again. Method 12 is especially promising.
 
 By default, the installer will download and install the execution framework to `<BASEPATH>\AtomicRedTeam`
 
