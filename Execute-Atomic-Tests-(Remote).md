@@ -23,7 +23,7 @@ PowerShell version 6 or higher (Core) must be installed when the Local and Remot
 
 Click [here](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7) for instructions on installing PS Core. 
 
-#### PowerShell Remoting over SSH
+#### Configure PowerShell Remoting over SSH
 
 The Remote machine must be configured for PowerShell Remoting over SSH when the Local and Remote computers are not Windows.
 
