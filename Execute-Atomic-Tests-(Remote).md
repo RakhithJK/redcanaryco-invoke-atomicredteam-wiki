@@ -69,6 +69,7 @@ Now that you have a persistent session established (`$sess`), you can use it wit
 To execute an atomic test on a remote machine, you must first ou must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
 
 ```powershell
+# Must be using PowerShell version 6 or higher (Core) on the Local Windows Machine
 # example session establishment to a computer named 'testcomputer'
 $sess = New-PSSession -HostName testcomputer -Username username
 ```
