@@ -56,7 +56,7 @@ The same options that are available during Local execution are available for Rem
 To execute an atomic test on a remote machine, you must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
 
 ```powershell
-# example session establishment to a computer named 'testcomputer'
+# example session establishment from the local computer to a remote computer named 'testcomputer'
 $sess = New-PSSession -ComputerName testcomputer -Credential domain\username
 ```
 
@@ -66,11 +66,11 @@ Now that you have a persistent session established (`$sess`), you can use it wit
 
 ## Establish a PS Session (From Windows to Linux,OSx)
 
-To execute an atomic test on a remote machine, you must first ou must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
+To execute an atomic test on a remote machine, you must first you must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
 
 ```powershell
 # Must be using PowerShell version 6 or higher (Core) on the Local Windows Machine
-# example session establishment to a computer named 'testcomputer'
+# example session establishment from the local computer to a remote computer named 'testcomputer'
 $sess = New-PSSession -HostName testcomputer -Username username
 ```
 
@@ -83,7 +83,7 @@ Now that you have a persistent session established (`$sess`), you can use it wit
 To execute an atomic test on a remote machine, you must first ou must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
 
 ```powershell
-# example session establishment to a computer named 'testcomputer'
+# example session establishment from the local computer to a remote computer named 'testcomputer'
 $sess = New-PSSession -HostName testcomputer -Username username
 ```
 
