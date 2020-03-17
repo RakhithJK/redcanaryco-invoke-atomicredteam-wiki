@@ -47,29 +47,6 @@ Invoke-AtomicTest T1117 -TimeoutSeconds 15
 
 If the attack commands do not exit (return) within in the specified `-TimeoutSeconds`, the process and it's children will be forcefully terminated. The default value of `-TimeoutSeconds` is 120. This allows the `Invoke-AtomicTest` script to move on to the next test.
 
-#### Execute test on a Remote Windows Machine through a PowerShell Session
-
-To execute an atomic test on a remote Windows machine, you must first establish a PowerShell Session. Ensure that PowerShell remoting is enabled on the remote machine before you start. See the [Enabled-PSRemoting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7) commandlet for details.
-
-```powershell
-# example session establishment to a computer named 'testcomputer'
-$sess = New-PSSession -ComputerName testcomputer -Credential domain\username
-```
-
-In the example above, substitute "testcomputer" with the name of the remote computer and "domain\username" with the domain (if applicable) and username of a user with administrative access on the remote machine. When you execute this command, a dialog box will appear and prompt you to enter the password for the specified user.
-
-Now that you have a persistent session established (`$sess`), you can use it with the `Invoke-AtomicTest` function to cause execution to occur on the remote machine.
-
-```powershell
-# Install any required prerequisites on the remote machine before test execution
-Invoke-AtomicTest T1117 -Session $sess -GetPrereqs
-
-# execute all atomic tests in technique T1117 on a remote machine
-Invoke-AtomicTest T1117 -Session $sess
-```
-
-Note that for remote execution the `PathToAtomicsFolder` always starts with $env:Temp, whereas for a local machine it typically starts with C:\AtomicRedTeam.
-
 #### Execute All Tests
 
 This is not recommended but you can execute all Atomic tests in your atomics folder with the follwing:
