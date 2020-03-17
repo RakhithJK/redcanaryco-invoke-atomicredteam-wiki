@@ -47,7 +47,7 @@ Invoke-AtomicTest T1117 -Session $sess
 
 Note that for remote execution the `PathToAtomicsFolder` always starts with $env:Temp, even if you have specified a different location on the Local Machine.
 
-The same options that are available during Local Execution are available for remote execution as well. For example, cleanup up commands (-Cleanup), Prerequisites (-CheckPrereqs, -GetPrereqs), Prompt for custom input arguments (-PromptForInputArgs). See [Execute Atomic Tests (Local)](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Local)) for details on each option.
+The same options that are available during Local execution are available for Remote execution as well. For example, cleanup up commands (-Cleanup), Prerequisites (-CheckPrereqs, -GetPrereqs), Show Test Details (-ShowDetails, -ShowDetailsBrief), and Prompt for custom input arguments (-PromptForInputArgs). See [Execute Atomic Tests (Local)](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Local)) for details on each of these options.
 
 ## Establish a PS Session (From Windows to Windows)
 
