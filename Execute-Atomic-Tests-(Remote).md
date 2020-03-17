@@ -33,9 +33,11 @@ See [this link](https://docs.microsoft.com/en-us/powershell/scripting/learn/remo
 
 Before executing the test, you must first establish a PS session ($sess) to the Remote machine.
 
-* [Establish a PS Session (From Windows to Windows)]()
-* [Establish a PS Session (From Windows to Linux,OSx)]()
-* [Establish a PS Session (From Linux,OSx to Windows,Linux,OSx)]()
+* [Establish a PS Session (From Windows to Windows)](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#establish-a-ps-session-from-windows-to-windows)
+* [Establish a PS Session (From Windows to Linux,OSx)](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#establish-a-ps-session-establish-a-ps-session-from-linuxosx-to-windowslinuxosx)
+* [Establish a PS Session (From Linux,OSx to Windows,Linux,OSx)](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#establish-a-ps-session-establish-a-ps-session-from-linuxosx-to-windowslinuxosx)
+
+After you have established the PS session ($sess) you can proceed with test execution as follows.
 
 ```powershell
 # Install any required prerequisites on the remote machine before test execution
