@@ -51,7 +51,7 @@ The same options that are available during Local Execution are available for rem
 
 ## Establish a PS Session (From Windows to Windows)
 
-To execute an atomic test on a remote machine, you must first establish a PowerShell Session. 
+To execute an atomic test on a remote machine, you must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
 
 ```powershell
 # example session establishment to a computer named 'testcomputer'
@@ -64,7 +64,20 @@ Now that you have a persistent session established (`$sess`), you can use it wit
 
 ## Establish a PS Session (Establish a PS Session (From Windows to Linux,OSx)
 
-To execute an atomic test on a remote machine, you must first establish a PowerShell Session. 
+To execute an atomic test on a remote machine, you must first ou must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
+
+```powershell
+# example session establishment to a computer named 'testcomputer'
+$sess = New-PSSession -HostName testcomputer -Username username
+```
+
+In the example above, substitute "testcomputer" with the name of the remote computer and "username" with the username of a user that can SSH to the Remote machine. When you execute this command, you will be prompted to enter the password for the specified user. You can optionally specify the -KeyFilePath option to authenticate using your private key.
+
+Now that you have a persistent session established (`$sess`), you can use it with the `Invoke-AtomicTest` function to cause execution to occur on the remote machine.
+
+## Establish a PS Session (Establish a PS Session (From Linux,OSx to Windows,Linux,OSx)
+
+To execute an atomic test on a remote machine, you must first ou must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
 
 ```powershell
 # example session establishment to a computer named 'testcomputer'
