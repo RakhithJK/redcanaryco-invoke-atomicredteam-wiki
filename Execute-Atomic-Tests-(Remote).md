@@ -21,9 +21,7 @@ By default, only users in the Adminstrators group on the Remote machine can make
 
 PowerShell version 6 or higher (Core) must be installed when the Local and Remote computers are not Windows.
 
-Click [here]() for instructions on installing PS Core on Windows. 
-Click [here]() for instructions on installing PS Core on Linux. 
-Click [here]() for instructions on installing PS Core on OSx. 
+Click [here](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7) for instructions on installing PS Core. 
 
 #### PowerShell Remoting over SSH
 
