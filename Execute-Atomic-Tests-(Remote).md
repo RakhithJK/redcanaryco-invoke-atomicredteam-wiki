@@ -64,7 +64,7 @@ In the example above, substitute "testcomputer" with the name of the remote comp
 
 Now that you have a persistent session established (`$sess`), you can use it with the `Invoke-AtomicTest` function to cause execution to occur on the remote machine.
 
-## Establish a PS Session (Establish a PS Session (From Windows to Linux,OSx)
+## Establish a PS Session (From Windows to Linux,OSx)
 
 To execute an atomic test on a remote machine, you must first ou must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
 
@@ -77,7 +77,7 @@ In the example above, substitute "testcomputer" with the name of the remote comp
 
 Now that you have a persistent session established (`$sess`), you can use it with the `Invoke-AtomicTest` function to cause execution to occur on the remote machine.
 
-## Establish a PS Session (Establish a PS Session (From Linux,OSx to Windows,Linux,OSx)
+## Establish a PS Session  (From Linux,OSx to Windows,Linux,OSx)
 
 To execute an atomic test on a remote machine, you must first ou must first [meet the prerequisites](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote)#prerequisites) and establish a PowerShell Session. 
 
