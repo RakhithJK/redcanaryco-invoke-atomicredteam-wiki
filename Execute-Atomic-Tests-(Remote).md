@@ -29,32 +29,34 @@ The Remote machine must be configured for PowerShell Remoting over SSH when the 
 
 See [this link](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7) for instructions on configuring PowerShell Remoting over SSH.
 
-## Execute Atomic Tests on Remote Machine (Windows to Windows)
+## Execute Atomic Tests on Remote Machine
 
-#### Establish a PS Session
+Before executing the test, you must first establish a PS session to the Remote machine.
+
+* [Establish a PS Session (From Windows to Windows)]()
+* [Establish a PS Session (From Windows to Linux,OSx)]()
+* [Establish a PS Session (From Linux,OSx to Windows,Linux,OSx)]()
+
+```powershell
+# Install any required prerequisites on the remote machine before test execution
+Invoke-AtomicTest T1117 -Session $sess -GetPrereqs
+
+# execute all atomic tests in technique T1117 on a remote machine
+Invoke-AtomicTest T1117 -Session $sess
+```
+
+Note that for remote execution the `PathToAtomicsFolder` always starts with $env:Temp, even if you have specified a different location on the Local Machine
+
+## Establish a PS Session (From Windows to Windows)
 
 To execute an atomic test on a remote machine, you must first establish a PowerShell Session. 
 
 ```powershell
 # example session establishment to a computer named 'testcomputer'
-$winSess = New-PSSession -ComputerName testcomputer -Credential domain\username
+$sess = New-PSSession -ComputerName testcomputer -Credential domain\username
 ```
 
 In the example above, substitute "testcomputer" with the name of the remote computer and "domain\username" with the domain (if applicable) and username of a user with administrative access on the remote machine. When you execute this command, a dialog box will appear and prompt you to enter the password for the specified user.
 
 Now that you have a persistent session established (`$winSess`), you can use it with the `Invoke-AtomicTest` function to cause execution to occur on the remote machine.
-
-#### Execute the Test
-
-```powershell
-# Install any required prerequisites on the remote machine before test execution
-Invoke-AtomicTest T1117 -Session $winSess -GetPrereqs
-
-# execute all atomic tests in technique T1117 on a remote machine
-Invoke-AtomicTest T1117 -Session $winSess
-```
-
-Note that for remote execution the `PathToAtomicsFolder` always starts with $env:Temp, even if you have specified a different location on the Local Machine
-
-
 
