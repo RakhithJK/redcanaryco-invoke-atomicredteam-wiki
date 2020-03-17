@@ -54,8 +54,7 @@ Invoke-AtomicTest T1117 -Session $winSess -GetPrereqs
 Invoke-AtomicTest T1117 -Session $winSess
 ```
 
-Note that for remote execution the `PathToAtomicsFolder` always starts with $env:Temp, whereas for a local machine it typically starts with C:\AtomicRedTeam.
-
+Note that for remote execution the `PathToAtomicsFolder` always starts with $env:Temp, even if you have specified a different location on the Local Machine
 
 
 
