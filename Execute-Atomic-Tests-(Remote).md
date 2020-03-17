@@ -31,7 +31,7 @@ See [this link](https://docs.microsoft.com/en-us/powershell/scripting/learn/remo
 
 ## Execute Atomic Tests on Remote Machine
 
-Before executing the test, you must first establish a PS session to the Remote machine.
+Before executing the test, you must first establish a PS session ($sess) to the Remote machine.
 
 * [Establish a PS Session (From Windows to Windows)]()
 * [Establish a PS Session (From Windows to Linux,OSx)]()
