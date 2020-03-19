@@ -10,7 +10,7 @@ From a Local machine where Invoke-AtomicTest is installed, you can execute an at
 | Windows | Linux, macOS | 1) Local must have PowerShell Core installed <br>2) Remote must be configured for PowerShell Remoting over SSH |
 | Linux, macOS | Windows | 1) Local must have PowerShell Core installed <br>2) Remote must be configured for PowerShell Remoting over SSH |
 
-### Enable PS Remoting
+### Enable PowerShell Remoting
 
 If your Local and Remote machines are both Windows OS, you simply need to enable PS Remoting on the Remote machine.
 Instructions to enable PS Remoting can be found [here](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7).
