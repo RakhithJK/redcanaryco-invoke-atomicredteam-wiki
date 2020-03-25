@@ -1,6 +1,6 @@
 This execution framework (Invoke-AtomicRedTeam) works cross-platform on Windows, Linux and MacOS. However, to use it on Linux and Mac you must install PowerShell Core. See [Installing PowerShell Core on Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6) and [Installing PowerShell Core on MacOS](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6) for details.
 
-**Minimum supported PowerShell is 5.0**
+**Minimum supported PowerShell version is 5.0**
 
 ## Install Execution Framework Only
 
