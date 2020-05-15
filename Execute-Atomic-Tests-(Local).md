@@ -33,6 +33,12 @@ Tip: Add this to your PowerShell profile so it is always set to your preferred d
 Invoke-AtomicTest T1117 -TestNames "Regsvr32 remote COM scriptlet execution","Regsvr32 local DLL execution"
 ```
 
+#### Execute Specific Attacks (by Atomic Test GUID) for a Given Technique
+
+```powershell
+Invoke-AtomicTest T1003 -TestGuids 5c2571d0-1572-416d-9676-812e64ca9f44,66fb0bc1-3c3f-47e9-a298-550ecfefacbc
+```
+
 #### Execute All Attacks for a Given Technique
 
 ```powershell
