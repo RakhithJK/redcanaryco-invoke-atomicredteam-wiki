@@ -38,6 +38,7 @@ Invoke-AtomicTest T1117 -TestNames "Regsvr32 remote COM scriptlet execution","Re
 ```powershell
 Invoke-AtomicTest T1003 -TestGuids 5c2571d0-1572-416d-9676-812e64ca9f44,66fb0bc1-3c3f-47e9-a298-550ecfefacbc
 ```
+Execution by GUID is useful when scripting because the GUID's are guaranteed to not change, whereas the test number and test name for a given test may change.
 
 #### Execute All Attacks for a Given Technique
 
