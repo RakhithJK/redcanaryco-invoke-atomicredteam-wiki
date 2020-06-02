@@ -16,7 +16,7 @@ The first time you start the GUI, the PowerShell Universal Dashboard will be ins
 
 You can stop the server from running with the `Stop-AtomicGUI` command
 
-## Step 2: Fill Out the Form
+## Steps 2 & 3: Fill Out the Form and Generate the YAML
 
 Use the provided web form to define the new atomic. Any optional components can be left blank if you don't intend to use them. Once you've filled out the form, click the `Generate Test Definition YAML` button.
 
