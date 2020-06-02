@@ -32,4 +32,4 @@ Use the left and right arrow buttons to increase and decrease the indentation as
 
 ## Steps 5 & 6: Copy YAML & Paste into Parent Technique YAML File
 
-Use the "Copy" button to copy and paste the generated YAML into the parent YAML file of an exiting technique (e.g. T1564.004.yaml). Make sure the indention of the YAML for your new atomic matches that of other atomics within the parent YAML file.
+Use the "Copy" button to copy and then paste the generated YAML into the parent YAML file of an exiting technique (e.g. T1564.004.yaml). Make sure the indention of the YAML for your new atomic matches that of other atomics within the parent YAML file.
