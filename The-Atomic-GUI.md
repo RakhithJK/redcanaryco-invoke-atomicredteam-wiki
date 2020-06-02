@@ -14,6 +14,6 @@ You can stop the server from running with the `Stop-AtomicGUI` command
 
 ## Step 2: Fill Out the Form
 
-Use the provided web form to define the new atomic. Any optional components can be left blank if you don't intend to use them.
+Use the provided web form to define the new atomic. Any optional components can be left blank if you don't intend to use them. Once you've filled out the form, click the `Generate Test Definition YAML` button.
 
 ![image](https://user-images.githubusercontent.com/22311332/83467703-f6438c80-a437-11ea-8747-3152ce15b35c.png)
