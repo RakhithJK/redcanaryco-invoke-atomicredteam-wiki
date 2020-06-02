@@ -1,6 +1,6 @@
 The Atomic GUI aids in the creation of new atomics by providing a web form that can be filled out in order to generate the YAML test definition. This YAML can then by copy and pasted into the YAML for the appropriate Technique Number (e.g. T1003) in order to add a new atomic test. Instructions for using the Atomic GUI are provided below.
 
-# Start the Atomic GUI
+## Step 1: Start the Atomic GUI
 
 ```powershell
 Start-AtomicGUI
@@ -11,3 +11,9 @@ This will start the Atomic GUI on port 8487 by default and launch a Web Browser 
 The first time you start the GUI, the PowerShell Universal Dashboard will be installed if needed.
 
 You can stop the server from running with the `Stop-AtomicGUI` command
+
+## Step 2: Fill Out the Form
+
+Use the provided web form to define the new atomic. Any optional components can be left blank if you don't intend to use them.
+
+![image](https://user-images.githubusercontent.com/22311332/83467703-f6438c80-a437-11ea-8747-3152ce15b35c.png)
