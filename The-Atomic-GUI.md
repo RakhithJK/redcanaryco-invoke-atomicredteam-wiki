@@ -4,6 +4,8 @@ The Atomic GUI aids in the creation of new atomics by providing a web form that 
 
 ## Step 1: Start the Atomic GUI
 
+From a PowerShell prompt where the Invoke-AtomicRedTeam module is imported, run the following command to start the Atomic GUI.
+
 ```powershell
 Start-AtomicGUI
 ```
