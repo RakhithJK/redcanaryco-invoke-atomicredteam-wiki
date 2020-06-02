@@ -28,4 +28,6 @@ YAML uses the indentation level of each line of text to determent which elements
 
 Use the left and right arrow buttons to increase and decrease the indentation as needed.
 
+![image](https://user-images.githubusercontent.com/22311332/83550142-998db380-a4c3-11ea-86ee-dbf726008587.png)
+
 ## Steps 5 & 6: Copy YAML & Paste into Parent Technique YAML File
