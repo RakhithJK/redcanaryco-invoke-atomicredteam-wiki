@@ -24,7 +24,7 @@ Use the provided web form to define the new atomic. Any optional components can 
 
 ## Steps 4: Adjust Indentation
 
-YAML uses the indentation level of each line of text to determent which elements belong to which parent elements. Therefore it is important that the indentation of your YAML file match the indentation of the parent YAML file you will be adding your generated YAML to.
+YAML uses the indentation level of each line of text to determent which elements belong to which parent elements. Therefore it is important that the indentation of your YAML match the indentation of the parent YAML file you will be adding your generated YAML to.
 
 Use the left and right arrow buttons to increase and decrease the indentation as needed.
 
