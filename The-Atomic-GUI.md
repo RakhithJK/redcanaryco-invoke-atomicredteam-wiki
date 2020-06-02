@@ -12,7 +12,7 @@ Start-AtomicGUI
 
 This will start the Atomic GUI on port 8487 by default and launch a Web Browser with the GUI loaded. The web server is bound to the localhost interface only, it is not accessible from another computer on the network. You can specify a different port number to use with the `-Port <portNum>` parameter.
 
-The first time you start the GUI, the PowerShell Universal Dashboard will be installed if needed.
+The first time you start the GUI, the PowerShell Universal Dashboard module will be installed if needed.
 
 You can stop the server from running with the `Stop-AtomicGUI` command
 
