@@ -1,6 +1,6 @@
 The Atomic GUI aids in the creation of new atomics by providing a web form that can be filled out in order to generate the YAML test definition. This YAML can then by copy and pasted into the YAML for the appropriate Technique Number (e.g. T1003) in order to add a new atomic test. Instructions for using the Atomic GUI are provided below.
 
-![AtomicGUIbeta](https://user-images.githubusercontent.com/22311332/83468238-656db080-a439-11ea-8123-25bf45068961.gif)
+![AtomicGUIgif](https://user-images.githubusercontent.com/22311332/83468238-656db080-a439-11ea-8123-25bf45068961.gif)
 
 ## Step 1: Start the Atomic GUI
 
