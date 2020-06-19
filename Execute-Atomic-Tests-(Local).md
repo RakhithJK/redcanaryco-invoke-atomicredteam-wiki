@@ -70,7 +70,7 @@ Specify a custom path to your atomics folder, example C:\AtomicRedTeam\atomics
 Invoke-AtomicTest All -PathToAtomicsFolder C:\AtomicRedTeam\atomics
 ```
 
-#### Specify an Alternate Path\Filename for the Execution Log
+#### Specify an Alternate Path for Writing the Execution Log
 
 ```powershell
 Invoke-AtomicTest T1117 -ExecutionLogPath 'C:\Temp'
