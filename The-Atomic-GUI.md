@@ -10,7 +10,7 @@ From a PowerShell prompt where the Invoke-AtomicRedTeam module is imported, run 
 Start-AtomicGUI
 ```
 
-This will start the Atomic GUI on port 8487 by default and launch a Web Browser with the GUI loaded. The web server is bound to the localhost interface only, it is not accessible from another computer on the network. You can specify a different port number to use with the `-Port <portNum>` parameter.
+This will start the Atomic GUI on port 8487 by default and launch a Web Browser with the GUI loaded. The web server is bound to the localhost interface only, it is not accessible from another computer on the network. You can specify a different port number to use with the `-Port <portNum>` parameter. Note: that the copy/paste functionality does not work well from Edge, please use another web browser (just visit the localhost:8487 in another browser after starting the GUI).
 
 The first time you start the GUI, the PowerShell Universal Dashboard module will be installed if needed.
 
