@@ -8,6 +8,8 @@ Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" 
 
 Note: If you installed AtomicRedTeam to a different path, you would need to adjust this command accordingly.
 
+You can verify that the module is installed using `Get-Module`.
+
 ## Add the Import to your PowerShell Profile
 
 If you would like to ensure that the `Invoke-AtomicTest` functionality is always available, without having to manually import the module first, you can add the import statement to your PowerShell profile. See the Microsoft documentation for [how to use PowerShell profiles](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7).
