@@ -3,6 +3,7 @@ The Atomic GUI aids in the creation of new atomics by providing a web form that 
 ![AtomicGUIgif](https://user-images.githubusercontent.com/22311332/83468238-656db080-a439-11ea-8123-25bf45068961.gif)
 
 ## Step 1: Start the Atomic GUI
+**Note**: To use the Atomic GUI you must have first [installed the execution framework](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Atomic-Red-Team) and [imported the module](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Import-the-Module).
 
 From a PowerShell prompt where the Invoke-AtomicRedTeam module is imported, run the following command to start the Atomic GUI.
 
