@@ -18,3 +18,15 @@ Here is an example profile to import the module at startup and to set the defaul
 Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\AtomicRedTeam\atomics"}
 ```
+
+A simple way to access your profile script is to execute the following from a PowerShell prompt.
+
+```powershell
+notepad $profile
+```
+
+Once you have edited and saved the profile in notepad, you can either restart Powershell to have the profile take effect or execute the following command.
+
+```powershell
+. $profile
+```
