@@ -25,7 +25,7 @@ A simple way to access your profile script is to execute the following from a Po
 notepad $profile
 ```
 
-Once you have edited and saved the profile in notepad, you can either restart Powershell to have the profile take effect or execute the following command.
+Once you have edited and saved the profile in notepad, you can either restart PowerShell to have the profile take effect or execute the following command.
 
 ```powershell
 . $profile
