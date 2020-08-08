@@ -17,5 +17,4 @@ Here is an example profile to import the module at startup and to set the defaul
 ```powershell
 Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\AtomicRedTeam\atomics"}
-Set-Location "C:\users\art-user"
 ```
