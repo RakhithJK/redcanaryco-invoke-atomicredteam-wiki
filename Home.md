@@ -10,4 +10,4 @@ Invoke-AtomicRedTeam installation and use instructions can be found on the index
 
 There are a series of short instructional videos on [this YouTube channel](https://www.youtube.com/playlist?list=PL92eUXSF717W9TCfZzLca6DmlFXFIu8p6).
 
-You can also find an in-depth 2 hour webcast [here](https://www.youtube.com/watch?v=d_E-hfKQ5Hw) with 11 hands-on labs [here](https://docs.google.com/document/d/1c8_WRHp68Py9kyMYqMrs6aQ6ppcfLouV8jQ07UY27yE/edit).
+You can also find an in-depth 2 hour webcast [here](https://www.youtube.com/watch?v=d_E-hfKQ5Hw).
