@@ -43,10 +43,10 @@ After you have established the PS session ($sess) you can proceed with test exec
 
 ```powershell
 # Install any required prerequisites on the remote machine before test execution
-Invoke-AtomicTest T1117 -Session $sess -GetPrereqs
+Invoke-AtomicTest T1218.010 -Session $sess -GetPrereqs
 
-# execute all atomic tests in technique T1117 on a remote machine
-Invoke-AtomicTest T1117 -Session $sess
+# execute all atomic tests in technique T1218.010 on a remote machine
+Invoke-AtomicTest T1218.010 -Session $sess
 ```
 
 Note that for remote execution the `PathToAtomicsFolder` always starts with $env:Temp, even if you have specified a different location on the Local Machine.
