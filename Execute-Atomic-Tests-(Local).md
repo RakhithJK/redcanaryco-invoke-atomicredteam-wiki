@@ -12,7 +12,7 @@ You may find it useful to [List Atomic Tests](https://github.com/redcanaryco/inv
 #### Execute Specific Attacks (by Atomic Test Number) for a Given Technique
 
 ```powershell
-Invoke-AtomicTest T1117 -TestNumbers 1,2
+Invoke-AtomicTest T1218.010 -TestNumbers 1,2
 ```
 
 This assumes your atomics folder is in the default location of `<BASEPATH>\AtomicRedTeam\atomics`
@@ -30,7 +30,7 @@ Tip: Add this to your PowerShell profile so it is always set to your preferred d
 #### Execute Specific Attacks (by Atomic Test Name) for a Given Technique
 
 ```powershell
-Invoke-AtomicTest T1117 -TestNames "Regsvr32 remote COM scriptlet execution","Regsvr32 local DLL execution"
+Invoke-AtomicTest T1218.010 -TestNames "Regsvr32 remote COM scriptlet execution","Regsvr32 local DLL execution"
 ```
 
 #### Execute Specific Attacks (by Atomic Test GUID) for a Given Technique
@@ -43,13 +43,13 @@ Execution by GUID is useful when scripting because the GUID's are guaranteed to 
 #### Execute All Attacks for a Given Technique
 
 ```powershell
-Invoke-AtomicTest T1117
+Invoke-AtomicTest T1218.010
 ```
 
 #### Specify a Process Timeout
 
 ```powershell
-Invoke-AtomicTest T1117 -TimeoutSeconds 15
+Invoke-AtomicTest T1218.010 -TimeoutSeconds 15
 ```
 
 If the attack commands do not exit (return) within in the specified `-TimeoutSeconds`, the process and it's children will be forcefully terminated. The default value of `-TimeoutSeconds` is 120. This allows the `Invoke-AtomicTest` script to move on to the next test.
@@ -83,7 +83,7 @@ Invoke-AtomicTest All -PathToAtomicsFolder C:\AtomicRedTeam\atomics
 #### Specify an Alternate Path\Filename for Writing the Execution Log
 
 ```powershell
-Invoke-AtomicTest T1117 -ExecutionLogPath 'C:\Temp\mylog.csv'
+Invoke-AtomicTest T1218.010 -ExecutionLogPath 'C:\Temp\mylog.csv'
 ```
 
 By default, test execution details are written to `Invoke-AtomicTest-ExecutionLog.csv` in the tmp directory ($env:TEMP). Use the `-ExecutionLogPath` parameter to write to a different file. Execution is only logged when the attack commands are run (not when the `-ShowDetails` , `-CheckPrereqs`, `GetPrereqs`, or `-Cleanup` switches are used). Use the `-NoExecutionLog` switch to not write execution details to disk.
