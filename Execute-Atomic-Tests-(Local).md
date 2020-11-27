@@ -54,9 +54,19 @@ Invoke-AtomicTest T1117 -TimeoutSeconds 15
 
 If the attack commands do not exit (return) within in the specified `-TimeoutSeconds`, the process and it's children will be forcefully terminated. The default value of `-TimeoutSeconds` is 120. This allows the `Invoke-AtomicTest` script to move on to the next test.
 
+#### Execute Tests Interactively
+
+You can execute tests in a way that lets you give input to the test during execution. For example, the commands executed my prompt you for confirmation before overwriting a file. In order to be able to do this you must specify the `-Interactive` flag. If you don't specify the `-Interactive` flag and a command asks for user input, the execution will hang until it eventually times out.
+
+```powershell
+Invoke-AtomicTest T1003 -Interactive
+```
+
+The drawback of using the `-Interactive` flag is that you can't redirect output from the command execution to a file.
+
 #### Execute All Tests
 
-This is not recommended but you can execute all Atomic tests in your atomics folder with the follwing:
+This is not recommended but you can execute all Atomic tests in your atomics folder with the following:
 
 ```powershell
 Invoke-AtomicTest All
