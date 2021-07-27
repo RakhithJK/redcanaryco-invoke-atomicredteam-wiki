@@ -1,1 +1,1 @@
-Questions? Get connected to the community on the [Atomic Red Team Slack channel](https://atomicredteam.slack.com/). Get your invite [here](https://docs.google.com/forms/d/e/1FAIpQLSc3oMtugGy--6kcYiY52ZJQQ-iOaEy-UpxfSA37IlA5wCMV0A/viewform?usp=sf_link).
+Questions? Get connected to the community on the [Atomic Red Team Slack channel](https://slack.atomicredteam.io/).
