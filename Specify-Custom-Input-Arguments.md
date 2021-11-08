@@ -3,7 +3,7 @@
 Use the `-PromptForInputArgs` switch to set your own values for the input arguments used by the atomic test.
 
 ```powershell
-Invoke-AtomicTest T1158 -TestNames "Create ADS command prompt" -PromptForInputArgs
+Invoke-AtomicTest T1564.004 -TestNames "Create ADS command prompt" -PromptForInputArgs
 ```
 
 ## Scriptable Custom Input Arguments 
