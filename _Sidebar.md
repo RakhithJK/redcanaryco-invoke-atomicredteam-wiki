@@ -6,5 +6,6 @@
 * [Execute Atomic Tests (Remote)](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Remote))
 * [Specify Custom Input Arguments](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Specify-Custom-Input-Arguments)
 * [Cleanup after Executing Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Cleanup-After-Executing-Atomic-Tests)
+* [Execution Logging](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Logging)
 * [Helper Functions](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Helper-Functions)
 * [The Atomic GUI](https://github.com/redcanaryco/invoke-atomicredteam/wiki/The-Atomic-GUI)
