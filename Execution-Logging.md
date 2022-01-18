@@ -1,0 +1,1 @@
+ Invoke-AtomicTest tT1027  -TestNumbers 2 *>&1 | Tee-Object atomic-out.txt -Append
