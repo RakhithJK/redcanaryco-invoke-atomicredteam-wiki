@@ -10,6 +10,8 @@ The Invoke-AtomicRedTeam Execution is available for install for the PowerShell G
 Install-Module -Name invoke-atomicredteam,powershell-yaml -Scope CurrentUser
 ```
 
+Note: If you get an error relating to a missing PSRepository, use `Register-PSRepository -Default` to register the needed repository.
+
 To install the execution framework without downloading it from the PowerShell Gallery as shown above, you can continue with the following instructions:
 
 ```powershell
