@@ -21,7 +21,7 @@ Install-AtomicRedTeam
 
 If you get an `Import-Module` error stating that the module "cannot be loaded because running scripts is disabled on this system", restart powershell using `powershell -exec bypass` or bypass execution policy with one of [these](https://blog.netspi.com/15-ways-to-bypass-the-powershell-execution-policy/) methods and try again. Method 12 is especially promising.
 
-By default, the installer will download and install the execution framework to `<BASEPATH>\AtomicRedTeam`
+If you use the `Install-Module` method, the module will be located in your default PowerShell modules folder and you won't need to manually import the module each time you start a new PowerShell Windows. Otherwise, if you install using `Install-AtomicRedTeam`, the installer will download and install the execution framework to `<BASEPATH>\AtomicRedTeam`
 
 Where `<BASEPATH>` is `C:` in Windows or `~` in Linux/MacOS
 
