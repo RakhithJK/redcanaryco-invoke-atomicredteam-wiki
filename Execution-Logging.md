@@ -42,5 +42,5 @@ Invoke-AtomicTest T1016 -LoggingModule "Attire-ExecutionLogger" -ExecutionLogPat
 
 This will create a JSON execution log called `T1106-Windows.json` in the current directory. You can then import this file into Vectr.
 
-Note: The default logger appends logs to a single file, but the Attire logger over writes the log each time Invoke-AtomicTest is called.
+Note: The default logger appends logs to a single file, but the Attire logger overwrites the log each time Invoke-AtomicTest is called.
 
