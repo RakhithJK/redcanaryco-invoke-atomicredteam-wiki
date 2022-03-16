@@ -30,4 +30,17 @@ Invoke-AtomicTest T1027  -TestNumbers 2 2>>atomic-error.txt | Tee-Object atomic-
 
 # Attire Logger
 
-Instead of using the default logging mechanism you can log execution details *including command output* in the Attire format. The Attire format is written as JSON data and is importable into tools like [Vectr](https://vectr.io/), a purple team reporting tool. 
+Instead of using the default logging mechanism you can log execution details (**including command output**) in the Attire format. The Attire format is written as JSON data and is importable into tools like [Vectr](https://vectr.io/), a purple team reporting tool.
+
+To use the Attire logging format, you must first download the `Attire-ExecutionLogger.psm1` file a import it as shown [here](https://github.com/SecurityRiskAdvisors/invoke-atomic-attire-logger)
+
+You can specify the use of the Attire logger when executing atomic tests as follows.
+
+```powershell
+Invoke-AtomicTest T1016 -LoggingModule "Attire-ExecutionLogger" -ExecutionLogPath T1016-Windows.json
+```
+
+This will create a JSON execution log called `T1106-Windows.json` in the current directory. You can then import this file into Vectr.
+
+Note: The default logger appends logs to a single file, but the Attire logger over writes the log each time Invoke-AtomicTest is called.
+
