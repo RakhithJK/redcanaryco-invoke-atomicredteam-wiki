@@ -50,7 +50,8 @@ If you'd like to keep all your logs without have to specify a new name every tim
 Invoke-AtomicTest T1016 -LoggingModule "Attire-ExecutionLogger" -ExecutionLogPath ((Get-Date -UFormat %s) + ".json")
 ```
 
-Lastly, if you don't want to specify the `LoggingModule` and `ExecutionLogPath` manually every time, you can add the following line to your PowerShell profile.
+Lastly, if you don't want to specify the `LoggingModule` manually every time, you can add the following line to your PowerShell profile.
 
 ```powershell
+$PSDefaultParameterValues = @{"Invoke-AtomicTest:LoggingModule"="Attire-ExecutionLogger"}
 ```
