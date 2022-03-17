@@ -55,3 +55,5 @@ Lastly, if you don't want to specify the `LoggingModule` manually every time, yo
 ```powershell
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:LoggingModule"="Attire-ExecutionLogger"}
 ```
+
+Helpful Hint: Add your Import-Module statements for the Invoke-AtomicRedTeam and Attire-ExecutionLogger modules to your profile as well. 
