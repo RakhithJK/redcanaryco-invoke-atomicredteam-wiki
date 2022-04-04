@@ -13,6 +13,8 @@ You may find it useful to [List Atomic Tests](https://github.com/redcanaryco/inv
 
 ```powershell
 Invoke-AtomicTest T1218.010 -TestNumbers 1,2
+# or using the short form ..
+Invoke-AtomicTest T1218.010-1,2
 ```
 
 This assumes your atomics folder is in the default location of `<BASEPATH>\AtomicRedTeam\atomics`
