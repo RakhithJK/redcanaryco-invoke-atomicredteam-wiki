@@ -27,6 +27,11 @@ Where `<BASEPATH>` is `C:` in Windows or `~` in Linux/MacOS
 
 Installing the execution framework (Invoke-AtomicRedTeam) does not download the repository of atomic test definitions by default (aka the [Atomics Folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics)). This is because the atomics folder contains many files likely to trigger AV alerts on the endpoint. You may choose to white-list the install directory (`<BASEPATH>\AtomicRedTeam` by default) so that files are not quarantined or removed. Or you may choose to copy a version of the atomics folder over to the system that contains only the tests you intend to run.
 
+If you get an error of "Could no create SSL/TLS secure channel." run the following PowerShell command before your run the install commands.
+
+```powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+```
 ## Install Execution Framework and Atomics Folder
 
 The [Atomics Folder](https://github.com/redcanaryco/atomic-red-team/tree/master/atomics) contains the test definitions; the commands that the execution framework will execute. If you would like to install the atomics folder at the same time that you install the execution framework, you can do this by adding the `-getAtomics` switch during the install of the execution framework.
