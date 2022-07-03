@@ -9,3 +9,4 @@
 * [Execution Logging](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Logging)
 * [Helper Functions](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Helper-Functions)
 * [The Atomic GUI](https://github.com/redcanaryco/invoke-atomicredteam/wiki/The-Atomic-GUI)
+* [Uninstallation](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Uninstallation)
