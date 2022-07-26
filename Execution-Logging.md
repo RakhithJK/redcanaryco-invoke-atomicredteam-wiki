@@ -58,4 +58,4 @@ $PSDefaultParameterValues = @{"Invoke-AtomicTest:LoggingModule"="Attire-Executio
 
 Helpful Hint: Add your Import-Module statements for the Invoke-AtomicRedTeam and Attire-ExecutionLogger modules to your profile as well.
 
-Click [here](https://youtu.be/NGKuP6AaAzg) for a demo of importing the Attire logs into [Vectr](https://vectr.io/).
+Click [here](https://www.youtube.com/watch?v=n-C9ovMFYnk) for a demo of importing the Attire logs into [Vectr](https://vectr.io/).
