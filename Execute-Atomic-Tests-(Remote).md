@@ -31,7 +31,7 @@ The Remote machine must be configured for PowerShell Remoting over SSH when the 
 
 See [this link](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7) for instructions on configuring PowerShell Remoting over SSH.
 
-Note: If your **remote** machine is Linux/macOS and you want to be able to run atomics tests that require administrative privileges you need to include `sudo` in your sshd_config file line as shown below.
+Note: If your **remote** machine is Linux/macOS and you want to be able to run atomics tests that require administrative privileges you need to include `sudo` in your sshd_config file line as shown below AND the user you are connecting with must be able to sudo without a password.
 
 `Subsystem powershell sudo /usr/bin/pwsh -sshs -NoLogo`
 
