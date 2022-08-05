@@ -1,4 +1,4 @@
-* [Installation](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Atomic-Red-Team)
+* [Installation](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Invoke-AtomicRedTeam)
 * [Import the Module](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Import-the-Module)
 * [List Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/List-Atomic-Tests)
 * [Check/Get Prerequisites for Atomic Tests](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Check-or-Get-Prerequisites-for-Atomic-Tests)
