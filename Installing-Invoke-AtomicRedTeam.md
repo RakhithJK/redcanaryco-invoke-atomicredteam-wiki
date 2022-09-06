@@ -48,7 +48,7 @@ IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/mas
 Install-AtomicRedTeam -getAtomics -Force
 ```
 
-If you prefer to download the atomics folder with only the test definition yaml files and none of the payloads from the `/src` or `/bin` directories, use the `-noPayloads` flag as follows. Use the `-getPrereq` command to download the payloads for the atomics you choose to run.
+If you prefer to download the atomics folder with only the test definition yaml files and none of the payloads from the `/src` or `/bin` directories, use the `-noPayloads` flag as follows. You can use the `-getPrereq` flag with `Invoke-AtomicTest` to download the payloads for the atomics you choose to run.
 
 ```powershell
 IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
@@ -65,7 +65,7 @@ Install-AtomicsFolder
 ```
 
 
-If you prefer to download the atomics folder with only the test definition yaml files and none of the payloads from the `/src` or `/bin` directories, use the `-noPayloads` flag as follows. Use the `-getPrereq` command to download the payloads for the atomics you choose to run.
+If you prefer to download the atomics folder with only the test definition yaml files and none of the payloads from the `/src` or `/bin` directories, use the `-noPayloads` flag as follows. You can use the `-getPrereq` flag with `Invoke-AtomicTest` to download the payloads for the atomics you choose to run.
 
 ```powershell
 IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicsfolder.ps1' -UseBasicParsing);
