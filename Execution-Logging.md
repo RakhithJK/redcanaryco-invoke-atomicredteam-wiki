@@ -17,7 +17,7 @@ Import-Csv $env:TEMP\Invoke-AtomicTest-ExecutionLog.csv | Out-GridView
 #### Redirect Output From Test Execution to a File
 
 ```powershell
-Invoke-AtomicTest tT1027 -TestNumbers 2 *>&1 | Tee-Object atomic-out.txt -Append
+Invoke-AtomicTest T1027 -TestNumbers 2 *>&1 | Tee-Object atomic-out.txt -Append
 ```
 
 The command above will log all three output streams, everything you see on the screen, to a file called `atomic-out.txt` and the `-Append` flag will cause it to append the data to the file instead of overwrite it.
