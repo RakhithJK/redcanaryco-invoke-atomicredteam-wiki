@@ -13,7 +13,7 @@ From a Local machine where Invoke-AtomicTest is installed, you can execute an at
 ### Enable PowerShell Remoting
 
 If your Local and Remote machines are both Windows OS, you simply need to enable PS Remoting on the Remote machine.
-Instructions to enable PS Remoting can be found [here](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7).
+Instructions to enable PS Remoting can be found [here](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting).
 
 **Note:** see the `-SkipNetworkProfileCheck` option if your client is using a public network profile.
 
@@ -23,13 +23,13 @@ By default, only users in the Adminstrators group on the Remote machine can make
 
 PowerShell version 6 or higher (Core) must be installed when the Local and Remote computers are not Windows.
 
-Click [here](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7) for instructions on installing PS Core. 
+Click [here](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell) for instructions on installing PS Core. 
 
 ### Configure PowerShell Remoting over SSH
 
 The Remote machine must be configured for PowerShell Remoting over SSH when the Local and Remote computers are not Windows.
 
-See [this link](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7) for instructions on configuring PowerShell Remoting over SSH.
+See [this link](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core) for instructions on configuring PowerShell Remoting over SSH.
 
 Note: If your **remote** machine is Linux/macOS and you want to be able to run atomics tests that require administrative privileges you need to include `sudo` in your sshd_config file line as shown below AND the user you are connecting with must be able to sudo without a password.
 
