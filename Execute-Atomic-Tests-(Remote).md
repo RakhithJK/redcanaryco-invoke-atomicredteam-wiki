@@ -34,9 +34,11 @@ See [this link](https://docs.microsoft.com/en-us/powershell/scripting/learn/remo
 Note: If your **remote** machine is Linux/macOS and you want to be able to run atomics tests that require administrative privileges you need to include `sudo` in your **sshd_config** file line as shown below AND the user you are connecting with must be able to sudo without a password.
 
 Linux: **/etc/ssh/sshd_config**
+
 `Subsystem powershell sudo /usr/bin/pwsh -sshs -NoLogo`
 
 macOS: **/private/etc/ssh/sshd_config**
+
 `Subsystem powershell sudo /usr/local/bin/pwsh -sshs -NoLogo`
 
 ## Execute Atomic Tests on Remote Machine
