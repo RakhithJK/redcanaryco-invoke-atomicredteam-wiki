@@ -35,6 +35,7 @@ Note: If your **remote** machine is Linux/macOS and you want to be able to run a
 
 Linux: **/etc/ssh/sshd_config**
 `Subsystem powershell sudo /usr/bin/pwsh -sshs -NoLogo`
+
 macOS: **/private/etc/ssh/sshd_config**
 `Subsystem powershell sudo /usr/local/bin/pwsh -sshs -NoLogo`
 
