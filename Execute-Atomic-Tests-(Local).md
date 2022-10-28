@@ -74,6 +74,26 @@ This is not recommended but you can execute all Atomic tests in your atomics fol
 Invoke-AtomicTest All
 ```
 
+A better way to do this would be to use a little PowerShell script to run each test one at a time, getting the prereqs first and cleanup up after each one. The following examples run all automated windows atomics.
+
+```powershell
+$techniques = gci C:\AtomicRedTeam\atomics\* -Recurse -Include T*.yaml | Get-AtomicTechnique
+
+foreach ($technique in $techniques) {
+    foreach ($atomic in $technique.atomic_tests) {
+        if ($atomic.supported_platforms.contains("windows") -and ($atomic.executor -ne "manual")) {
+            # Get Prereqs for test
+            Invoke-AtomicTest $technique.attack_technique -TestGuids $atomic.auto_generated_guid -GetPrereqs
+            # Invoke
+            Invoke-AtomicTest $technique.attack_technique -TestGuids $atomic.auto_generated_guid
+            # Sleep then cleanup
+            Start-Sleep 3
+            Invoke-AtomicTest  $technique.attack_technique -TestGuids $atomic.auto_generated_guid -Cleanup
+        }
+    }
+}
+```
+
 #### Execute All Tests from a Specific Directory
 
 Specify a custom path to your atomics folder, example C:\AtomicRedTeam\atomics
