@@ -74,7 +74,7 @@ This is not recommended but you can execute all Atomic tests in your atomics fol
 Invoke-AtomicTest All
 ```
 
-A better way to do this would be to use a little PowerShell script to run each test one at a time, getting the prereqs first and cleanup up after each one. The following examples run all automated windows atomics.
+A better way to do this would be to use a little PowerShell script to run each test one at a time, getting the prereqs first and cleaning up after each one. The following example runs all automated windows atomics.
 
 ```powershell
 $techniques = gci C:\AtomicRedTeam\atomics\* -Recurse -Include T*.yaml | Get-AtomicTechnique
