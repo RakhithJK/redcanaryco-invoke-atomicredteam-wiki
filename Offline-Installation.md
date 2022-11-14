@@ -1,4 +1,4 @@
-To prepare for **offline** installation you should install Atomic Red Team on an **online** system of the same OS version where the offline install is to be done. This allows you to easily grab all of the needed files from the online system and move them to the offline system. The instructions below are specific to Windows but you can adjust to make it work on Linux/macOS as well.
+To prepare for **offline** installation you should install Atomic Red Team on an **online** system of the same OS version where the **offline** install is to be done. This allows you to easily grab all of the needed files from the **online** system and move them to the **offline** system. The instructions below are specific to Windows but you can adjust to make it work on Linux/macOS as well.
 
 ## Steps to take from the **online** system:
 
