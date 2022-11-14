@@ -11,5 +11,5 @@ To prepare for offline installation you should install Atomic Red Team on an onl
 
 ## Steps to take from the **offline** system:
 
-1.  Make sure the file paths of the 3 folders are the same on the **offline** system as the **online**. You should have a c:\AtomicRedTeam folder with two folders in it (`atomics` and `invoke-atomicredteam). You should have a `powershell-yaml` folder at `$HOME\Documents\PowerShell\Modules` or `$env:ProgramFiles\PowerShell\Modules`
+1.  Make sure the file paths of the 3 folders are the same on the **offline** system as the **online**. You should have a `c:\AtomicRedTeam` folder with two folders in it (`atomics` and `invoke-atomicredteam`). You should have a `powershell-yaml` folder at `$HOME\Documents\PowerShell\Modules` or `$env:ProgramFiles\PowerShell\Modules`
 2) Import the Invoke-AtomicRedTeam module as described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Import-the-Module).
