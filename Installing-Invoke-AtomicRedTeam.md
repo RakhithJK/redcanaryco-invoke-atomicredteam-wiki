@@ -107,3 +107,7 @@ Branch
 Install-AtomicRedTeam -RepoOwner "clr2of8" -Branch "start-process-branch"
 Install-AtomicsFolder -RepoOwner "clr2of8" -Branch "start-process-branch"
 ```
+
+## Offline Installation
+
+[Offline Installation Instructions](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Offline-Installation)
