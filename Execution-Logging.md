@@ -60,7 +60,9 @@ Helpful Hint: Add your Import-Module statements for the Invoke-AtomicRedTeam and
 
 Click [here](https://www.youtube.com/watch?v=n-C9ovMFYnk) for a demo of importing the Attire logs into [Vectr](https://vectr.io/).
 
-# Syslog Logger (coming 4/15/23)
+# Syslog Logger
+
+Note: available after 4\15\23
 
 Instead of using the default logging mechanism you can log execution details directly to a Syslog server. Use the **privateConfig.ps1** file described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Continuous-Atomic-Testing) to specify your server and port.
 
