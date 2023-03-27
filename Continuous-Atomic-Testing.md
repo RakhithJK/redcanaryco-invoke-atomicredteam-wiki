@@ -89,7 +89,7 @@ Run Invoke-SetupAtomicRunner (again) to get any prereqs for tests that you enabl
 
 # The KickOff-AtomicRunner Scheduled Task
 
-The KickOff-AtomicRunner calls the Invoke-AtomicRunner function after the computer restarts. It runs 1 minutes after reboot (with retries at 2,4,8,16,32 and 64 minutes if needed - Windows only). The KickOff-AtomicRunner also handles log rotation for the Runner scripts.
+The KickOff-AtomicRunner scheduled task (or cronjob on Linux/macos) calls the Invoke-AtomicRunner function after the computer restarts. It runs 1 minutes after reboot (with retries at 2,4,8,16,32 and 64 minutes if needed - Windows only). The KickOff-AtomicRunner script also handles log rotation for the Runner scripts.
 
 # The Invoke-AtomicRunner Function
 
