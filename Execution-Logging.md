@@ -59,3 +59,22 @@ $PSDefaultParameterValues = @{"Invoke-AtomicTest:LoggingModule"="Attire-Executio
 Helpful Hint: Add your Import-Module statements for the Invoke-AtomicRedTeam and Attire-ExecutionLogger modules to your profile as well.
 
 Click [here](https://www.youtube.com/watch?v=n-C9ovMFYnk) for a demo of importing the Attire logs into [Vectr](https://vectr.io/).
+
+# Syslog Logger (coming 4/15/23)
+
+Instead of using the default logging mechanism you can log execution details directly to a Syslog server. Use the **privateConfig.ps1** file described [here](https://github.com/clr2of8/invoke-atomicredteam/wiki/Atomic-Runner-Functionality#set-custom-config-using-privateconfigps1) to specify your server and port.
+
+The SysLog messages will contain a JSON formatted string with the following information:
+
+* Execution Time (UTC)
+* Execution Time (Local)
+* Technique
+* Test Number
+* Test Name
+* Hostname
+* Username
+* GUID
+* Tag
+* CustomTag
+
+Where the **Tag** is set to **atomicrunner** and **CustomTag** is configurable via **privateConfig**.
