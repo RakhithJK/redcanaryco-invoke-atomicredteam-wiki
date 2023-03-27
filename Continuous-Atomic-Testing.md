@@ -41,7 +41,7 @@ Table of default values:
 | user | $env:USERDOMAIN\\$env:USERNAME | $env:USER |
 | basePath | $env:HOME | $env:USERPROFILE |
 | scheduleTimeSpan | 7 days | 7 days |
-| kickOffDelay| O minutes | O minutes |
+| kickOffDelay| 0 minutes | 0 minutes |
 | syslogServer |  |  |
 | syslogPort | 514 | 514 |
 | verbose | $false | $false |
