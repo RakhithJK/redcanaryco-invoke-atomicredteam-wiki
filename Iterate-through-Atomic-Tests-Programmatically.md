@@ -27,7 +27,7 @@ Write-Host -ForegroundColor Yellow "  macOS Tests: $macos"
 Write-Host -ForegroundColor Magenta "  Cloud/Container Tests: $cloud"
 ```
 
-## Print the GUID, Input Args and Commands for the macOS platform
+## Print the GUID, Input Args, and Commands for the macOS platform
 
 ```PowerShell
 $path = "C:\AtomicRedTeam\atomics\*"  # Set this to point to your atomics folder
