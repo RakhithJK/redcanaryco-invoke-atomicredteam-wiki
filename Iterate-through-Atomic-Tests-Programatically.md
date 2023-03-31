@@ -1,7 +1,7 @@
 ## Count the Number of Atomic Tests per Platform
 
 ```Powershell
-$path = C:\AtomicRedTeam\atomics\*  # set this to point to your atomics folder
+$path = "C:\AtomicRedTeam\atomics\*"  # set this to point to your atomics folder
 $techniques = gci $path -Recurse -Include T*.yaml | Get-AtomicTechnique
 
 $windows = $linux = $macos = $cloud = 0
@@ -25,4 +25,24 @@ Write-Host -ForegroundColor Cyan "Windows Tests: $windows"
 Write-Host -ForegroundColor Green "  Linux Tests: $linux"
 Write-Host -ForegroundColor Yellow "  macOS Tests: $macos"
 Write-Host -ForegroundColor Magenta "  Cloud/Container Tests: $cloud"
+```
+
+## Print the GUID, Input Args and Commands for the macOS platform
+
+```PowerShell
+$path = "C:\AtomicRedTeam\atomics\*"  # Set this to point to your atomics folder
+$techniques = Get-ChildItem $path -Recurse -Include T*.yaml | Get-AtomicTechnique
+
+foreach ($technique in $techniques) {
+    foreach ($atomic in $technique.atomic_tests) {
+        if ($atomic.supported_platforms.contains("macos")) {
+            Write-Host -Fore Green $atomic.auto_generated_guid + "`n"
+            foreach ($inputArg in $atomic.input_arguments.keys) {
+                Write-Host -Fore Yellow "** $inputArg **"
+                Write-Host -Fore Yellow $($atomic.input_arguments[$inputArg] | Out-String)
+            }
+            Write-Host -Fore Cyan $atomic.executor.command
+        }
+    }
+}
 ```
