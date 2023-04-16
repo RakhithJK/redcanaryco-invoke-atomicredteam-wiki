@@ -1,5 +1,3 @@
-Note: available after 4\15\23
-
 Adversary Emulation is possible by executing atomic tests in sequence. The Atomic Runner functionality allows you to run a configurable list of atomic tests base on a CSV list of atomic tests. The CSV file specifies each atomic tests to be run and can optionally specify custom input arguments and execution timeout values.
 
 This script works for Windows, Linux and MacOS. You will need to have PowerShell Core installed on Linux/MacOS to use these scripts.
