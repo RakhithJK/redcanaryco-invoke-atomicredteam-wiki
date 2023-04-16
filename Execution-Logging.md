@@ -62,8 +62,6 @@ Click [here](https://www.youtube.com/watch?v=n-C9ovMFYnk) for a demo of importin
 
 # Syslog Logger
 
-Note: available after 4\15\23
-
 Instead of using the default logging mechanism you can log execution details directly to a Syslog server. Use the **privateConfig.ps1** file described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Continuous-Atomic-Testing) to specify your server and port.
 
 The SysLog messages will contain a JSON formatted string with the following information:
