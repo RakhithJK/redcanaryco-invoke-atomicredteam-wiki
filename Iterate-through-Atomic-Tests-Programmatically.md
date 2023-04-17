@@ -46,3 +46,25 @@ foreach ($technique in $techniques) {
     }
 }
 ```
+
+## Write all Atomic Tests that require elevation to a CSV File
+
+```PowerShell
+$path = "C:\AtomicRedTeam\atomics\*"  # Set this to point to your atomics folder
+$techniques = Get-ChildItem $path -Recurse -Include T*.yaml | Get-AtomicTechnique
+$csvFile =  "AtomicsRequiringAdmin.csv"
+remove-item $csvFile -Force -ErrorAction Ignore
+foreach ($technique in $techniques) {
+    foreach ($atomic in $technique.atomic_tests) {
+        if ($atomic.executor.elevation_required ) {
+            $details = [PSCustomObject][ordered]@{ 
+                "Technique"              = $technique.attack_technique[0]
+                "Test Name"              = $atomic.name
+                "GUID"                   = $atomic.auto_generated_guid
+            } 
+            $details | Export-Csv -Path $csvFile -NoTypeInformation -Append
+            Write-Host -Fore Green $details
+        }
+    }
+}
+```
