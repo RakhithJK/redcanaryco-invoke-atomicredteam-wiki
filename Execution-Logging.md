@@ -60,7 +60,7 @@ Click [here](https://www.youtube.com/watch?v=n-C9ovMFYnk) for a demo of importin
 
 # Syslog Logger
 
-Instead of using the default logging mechanism you can log execution details directly to a Syslog server. Use the **privateConfig.ps1** file described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Continuous-Atomic-Testing) to specify your server and port.
+Instead of using the default logging mechanism you can log execution details directly to a Syslog server. Use the **privateConfig.ps1** file described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Continuous-Atomic-Testing) to specify your Syslog server and port. You can set the **LoggingModule** to **Syslog-ExecutionLogger** or just leave it blank.
 
 The SysLog messages will contain a JSON formatted string with the following information:
 
@@ -75,4 +75,4 @@ The SysLog messages will contain a JSON formatted string with the following info
 * Tag
 * CustomTag
 
-Where the **Tag** is set to **atomicrunner** and **CustomTag** is configurable via **privateConfig**.
+Where the **Tag** is set to **atomicrunner** and **CustomTag** is configurable via your **privateConfig.ps1** file.
