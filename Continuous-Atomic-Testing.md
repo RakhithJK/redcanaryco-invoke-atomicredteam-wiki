@@ -24,6 +24,7 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | kickOffDelay | A delay specified as Timespan to sleep before running the atomic |
 | syslogServer | Set this to the name of your syslog server if you want to use the SysLog execution logger |
 | syslogPort | The port for the syslog server (ignored if syslogServer not set) |
+| LoggingModule | The logging module to use the atomic execution logs (e.g. Attire-ExecutionLogger or Syslog-ExecutionLogger |
 | verbose | Set to $true for more output in the runner logs |
 | logFolder | Name of the folder that will be found in the basePath and contains the Runner logs |
 | CustomTag | A string that you want sent with each execution log sent to the SysLog logger  |
@@ -42,6 +43,7 @@ Table of default values:
 | kickOffDelay| 0 minutes | 0 minutes |
 | syslogServer |  |  |
 | syslogPort | 514 | 514 |
+| LoggingModule| Default-ExecutionLogger | Default-ExecutionLogger |
 | verbose | $false | $false |
 | logFolder | AtomicRunner-Logs | AtomicRunner-Logs |
 | CustomTag |  |  |
