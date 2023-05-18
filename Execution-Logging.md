@@ -62,6 +62,10 @@ Click [here](https://www.youtube.com/watch?v=n-C9ovMFYnk) for a demo of importin
 
 Instead of using the default logging mechanism you can log execution details directly to a Syslog server. Use the **privateConfig.ps1** file described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Continuous-Atomic-Testing) to specify your Syslog server and port. You can set the **LoggingModule** to **Syslog-ExecutionLogger** or just leave it blank.
 
+```powershell
+Invoke-AtomicTest T1016 -LoggingModule "Syslog-ExecutionLogger"
+```
+
 The SysLog messages will contain a JSON formatted string with the following information:
 
 * Execution Time (UTC)
