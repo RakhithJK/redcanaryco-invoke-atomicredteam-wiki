@@ -11,8 +11,10 @@ Invoke-AtomicRedTeam is a PowerShell module to execute tests as defined in the [
 
 * It is recommended to set up a test machine for atomic test execution that is similar to the build in your environment. Be sure you have your collection/EDR solution in place, and that the endpoint is checking in and active.
 
-Invoke-AtomicRedTeam installation and use instructions can be found on the index to the right (in the sidebar).
+Invoke-AtomicRedTeam installation and usage instructions can be found on the index to the right (in the sidebar).
 
 There are a series of short instructional videos on [this YouTube channel](https://www.youtube.com/playlist?list=PL92eUXSF717W9TCfZzLca6DmlFXFIu8p6).
 
 You can also find an in-depth 1 hour webcast [here](https://www.youtube.com/watch?v=O6w0oFcCAnI), with hands-on lab documents [here](https://1drv.ms/w/s!AvDXyd4cgfxesEclTt8tScoatJn2?e=pb0tsR).
+
+Also a good general overview of the value of attack emulation is found [here](https://vimeo.com/819912016/c76af1ca39?share=copy).
