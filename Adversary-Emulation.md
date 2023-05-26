@@ -1,10 +1,12 @@
-Adversary Emulation is possible by executing atomic tests in sequence. The Atomic Runner functionality allows you to run a configurable list of atomic tests base on a CSV list of atomic tests. The CSV file specifies each atomic tests to be run and can optionally specify custom input arguments and execution timeout values.
+Adversary Emulation is possible by executing atomic tests in sequence. The Atomic Runner functionality allows you to run a configurable list of atomic tests based on a CSV list of atomic tests. The CSV file specifies each atomic tests to be run and can optionally specify custom input arguments and execution timeout values.
 
 This script works for Windows, Linux and MacOS. You will need to have PowerShell Core installed on Linux/MacOS to use these scripts.
 
 # Execute Atomics Tests from the CSV Schedule
 
 Pass a CSV schedule to **Invoke-AtomicRunner**, optionally getting prereqs for each atomic test first and then cleanup up after.
+
+Sample CSV files including IcedID.csv can be found [here](https://github.com/clr2of8/AttackEmulationTools/tree/main/Samples/Emulations)
 
 ```powershell
 # This will list the name of each enabled test on the schedule (IcedID.csv in the current directory)
