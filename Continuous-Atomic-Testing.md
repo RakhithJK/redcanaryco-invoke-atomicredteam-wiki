@@ -53,8 +53,8 @@ Example **privateConfig.ps1**
 
 ```powershell
 $artConfig | Add-Member -Force -NotePropertyMembers @{
-  basePath = "C:\Users\Public"
-  PathToPrivateAtomics = "C:\MyPrivateAtomics\atomics" 
+  PathToPrivateAtomics = "C:\MyPrivateAtomics\atomics"
+  scheduleTimeSpan = New-TimeSpan -Days 1 
 }
 ```
 
