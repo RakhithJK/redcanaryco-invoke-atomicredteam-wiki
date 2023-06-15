@@ -21,6 +21,7 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | user | The user/account that will be used to execute atomics |
 | basePath | The path where you want the folder created that houses the logs and the runner schedule. |
 | scheduleTimeSpan | The time span in which you want all of the atomics on your schedule to complete. |
+| scheduleFileName | The name of the csv file containing the schedule (list) of atomic tests to run. |
 | kickOffDelay | A delay specified as Timespan to sleep before running the atomic |
 | syslogServer | Set this to the name of your syslog server if you want to use the SysLog execution logger |
 | syslogPort | The port for the syslog server (ignored if syslogServer not set) |
@@ -40,6 +41,7 @@ Table of default values:
 | user | $env:USERDOMAIN\\$env:USERNAME | $env:USER |
 | basePath | $env:HOME | $env:USERPROFILE |
 | scheduleTimeSpan | 7 days | 7 days |
+| scheduleFileName | AtomicRunnerSchedule.csv | AtomicRunnerSchedule.csv |
 | kickOffDelay| 0 minutes | 0 minutes |
 | syslogServer |  |  |
 | syslogPort | 514 | 514 |
