@@ -86,10 +86,10 @@ Where the **Tag** is set to **atomicrunner** and **CustomTag** is configurable v
 
 # WinEvent Logger
 
-You can log execution details directly to the Windows event log as shown below. You will find the `Atomic Red Team` log under the `Application and Services Logs` folder in the Windows event viewer.
+You can log execution details directly to the Windows event log as shown below. You will find the execution details in the `Atomic Red Team` log under the `Application and Services Logs` folder in the Windows event viewer.
 
 ```powershell
 Invoke-AtomicTest T1016 -LoggingModule "WinEvent-ExecutionLogger"
 ```
 
-Note: The very first time you use the WinEvent logger you will need to do so as admin so that the `Atomic Red Team` log can be created. After it has been created you now longer need to invoke tests as an admin user to get the execution details logged.
+Note: The very first time you use the WinEvent logger you will need to do so as admin so that the `Atomic Red Team` log can be created. After it has been created you no longer need to invoke tests as an admin user to get the execution details logged.
