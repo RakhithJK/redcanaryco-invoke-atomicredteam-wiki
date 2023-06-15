@@ -62,7 +62,7 @@ Looking for a way to merge multiple Attire logs into one file? Look [here](https
 
 # Syslog Logger
 
-Instead of using the default logging mechanism you can log execution details directly to a Syslog server. Use the **privateConfig.ps1** file described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Continuous-Atomic-Testing) to specify your Syslog server and port. You can set the **LoggingModule** to **Syslog-ExecutionLogger** or just leave it blank.
+Instead of using the default logging mechanism, you can log execution details directly to a Syslog server. Use the **privateConfig.ps1** file described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Continuous-Atomic-Testing) to specify your Syslog server and port. You can set the **LoggingModule** to **Syslog-ExecutionLogger** or just leave it blank.
 
 ```powershell
 Invoke-AtomicTest T1016 -LoggingModule "Syslog-ExecutionLogger"
@@ -86,7 +86,7 @@ Where the **Tag** is set to **atomicrunner** and **CustomTag** is configurable v
 
 # WinEvent Logger
 
-Instead of using the default logging mechanism you can log execution details directly to the Windows event log. You will find the `Atomic Red Team` log under the `Application and Services Logs` folder in the Windows event viewer.
+You can log execution details directly to the Windows event log as shown below. You will find the `Atomic Red Team` log under the `Application and Services Logs` folder in the Windows event viewer.
 
 ```powershell
 Invoke-AtomicTest T1016 -LoggingModule "WinEvent-ExecutionLogger"
