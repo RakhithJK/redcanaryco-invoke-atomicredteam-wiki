@@ -83,3 +83,13 @@ The SysLog messages will contain a JSON formatted string with the following info
 * CustomTag
 
 Where the **Tag** is set to **atomicrunner** and **CustomTag** is configurable via your **privateConfig.ps1** file.
+
+# WinEvent Logger
+
+Instead of using the default logging mechanism you can log execution details directly to the Windows event log. You will find the `Atomic Red Team` log under the `Application and Services Logs` folder in the Windows event viewer.
+
+```powershell
+Invoke-AtomicTest T1016 -LoggingModule "WinEvent-ExecutionLogger"
+```
+
+Note: The very first time you use the WinEvent logger you will need to do so as admin so that the `Atomic Red Team` log can be created. After it has been created you now longer need to invoke tests as an admin user to get the execution details logged.
