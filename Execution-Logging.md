@@ -76,6 +76,7 @@ The SysLog messages will contain a JSON formatted string with the following info
 * Test Number
 * Test Name
 * Hostname
+* IP Address
 * Username
 * GUID
 * Tag
