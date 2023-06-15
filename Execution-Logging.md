@@ -58,6 +58,8 @@ Alternatively, you could set the logger option via your [privateConfig.ps1 file]
 
 Click [here](https://www.youtube.com/watch?v=n-C9ovMFYnk) for a demo of importing the Attire logs into [Vectr](https://vectr.io/).
 
+Looking for a way to merge multiple Attire logs into one? Look [here](https://github.com/Retrospected/attire-merger)
+
 # Syslog Logger
 
 Instead of using the default logging mechanism you can log execution details directly to a Syslog server. Use the **privateConfig.ps1** file described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Continuous-Atomic-Testing) to specify your Syslog server and port. You can set the **LoggingModule** to **Syslog-ExecutionLogger** or just leave it blank.
