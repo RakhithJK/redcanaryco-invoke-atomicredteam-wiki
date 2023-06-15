@@ -30,7 +30,7 @@ Invoke-AtomicTest T1027  -TestNumbers 2 2>>atomic-error.txt | Tee-Object atomic-
 
 # Attire Logger
 
-Instead of using the default logging mechanism you can log execution details (**including command output**) in the Attire format. The Attire format is written as JSON data and is importable into tools like [Vectr](https://vectr.io/), a purple team reporting tool.
+Instead of using the default logging mechanism you can log execution details (**including command output**) in the Attire format. The Attire format is written as JSON data and is importable into tools like [Vectr](https://vectr.io/), a purple team reporting tool. The default log name when using the Attire Logger is `Invoke-AtomicTest-ExecutionLog-timestamp.json` in the tmp directory ($env:TEMP, %tmp%, or \tmp). Note that text *timestamp* in the log file name will be replaced by the actual timestamp at execution. This means that a new log file will be created every time Invoke-AtomicTest is called (because the timestamp will be different).
 
 You can specify the use of the Attire logger when executing atomic tests as follows.
 
