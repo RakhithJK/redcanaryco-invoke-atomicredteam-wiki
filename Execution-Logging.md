@@ -42,10 +42,10 @@ This will create a JSON execution log called `T1106-Windows.json` in the current
 
 Note: The default logger appends logs to a single file, but the Attire logger overwrites the log each time Invoke-AtomicTest is called.
 
-If you'd like to keep all your logs without having to specify a new name every time, you could auto generate the name. The following command would write a new log every time using the current time stamp as the name of the file.
+If you'd like to keep all your logs without having to specify a new name every time, you use the **timestamp** place holder in the name which will be replaced by the actual execution timestamp at run time. The following command would write a new log every time using the current time stamp as the name of the file.
 
 ```powershell
-Invoke-AtomicTest T1016 -LoggingModule "Attire-ExecutionLogger" -ExecutionLogPath ((Get-Date -UFormat %s) + ".json")
+Invoke-AtomicTest T1016 -LoggingModule "Attire-ExecutionLogger" -ExecutionLogPath "timestamp.json")
 ```
 
 Lastly, if you don't want to specify the `LoggingModule` manually every time, you can add the following line to your PowerShell profile.
