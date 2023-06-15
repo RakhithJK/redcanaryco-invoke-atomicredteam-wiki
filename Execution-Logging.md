@@ -58,7 +58,7 @@ Alternatively, you could set the logger option via your [privateConfig.ps1 file]
 
 Click [here](https://www.youtube.com/watch?v=n-C9ovMFYnk) for a demo of importing the Attire logs into [Vectr](https://vectr.io/).
 
-Looking for a way to merge multiple Attire logs into one? Look [here](https://github.com/Retrospected/attire-merger)
+Looking for a way to merge multiple Attire logs into one file? Look [here](https://github.com/Retrospected/attire-merger)
 
 # Syslog Logger
 
