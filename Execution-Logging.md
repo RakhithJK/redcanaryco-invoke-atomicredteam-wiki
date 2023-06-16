@@ -36,6 +36,8 @@ Import-Csv $env:TEMP\Invoke-AtomicTest-ExecutionLog.csv | Out-GridView
 
 #### Redirect Output From Test Execution to a File
 
+The Attire Logger is the only logging mechanism that produces a log containing the full command input and output details. If you want to capture the command output while using one of the other loggers you can use a command like the following.
+
 ```powershell
 Invoke-AtomicTest T1027 -TestNumbers 2 *>&1 | Tee-Object atomic-out.txt -Append
 ```
