@@ -17,6 +17,7 @@ Import-Csv $env:TEMP\Invoke-AtomicTest-ExecutionLog.csv | Out-GridView
 #### Execution Log Example
 
 | Execution Time (UTC) | Execution Time (Local) | Technique | Test Number | Test Name | Hostname | IP Address | Username | GUID | ProcessId | ExitCode |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 2023-06-16T14:09:24Z | 2023-06-16T08:09:24Z | T1016 | 1 | System Network Configuration Discovery on Windows | art-vm2 | 192.168.8.165 | testdomain\art | 970ab6a1-0157-4f3f-9a73-ec4166754b23 | 12584 | 0 |
 | 2023-06-16T14:09:25Z | 2023-06-16T08:09:25Z | T1016 | 2 | List Windows Firewall Rules | art-vm2 | 192.168.8.165 | testdomain\art | 038263cb-00f4-4b0a-98ae-0696c67e1752 | 11796 | 0 |
 | 2023-06-16T14:09:25Z | 2023-06-16T08:09:25Z | T1016 | 3 | System Network Configuration Discovery (TrickBot Style) | art-vm2 | 192.168.8.165 | testdomain\art | dafaf052-5508-402d-bf77-51e0700c02e2 | 4344 | 1 |
