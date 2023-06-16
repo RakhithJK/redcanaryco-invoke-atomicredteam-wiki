@@ -1,3 +1,10 @@
+# Built-in Logging Options
+
+1) [Default Logger (csv)](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Logging#default-logger)
+2) [Attire Logger](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Logging#attire-logger)
+3) [Syslog Logger](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Logging#syslog-logger)
+4) [WinEvent Logger](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Logging#winevent-logger)
+
 # Default Logger
 
 By default, test execution details are written to `Invoke-AtomicTest-ExecutionLog.csv` in the tmp directory ($env:TEMP, %tmp%, or \tmp). Use the `-ExecutionLogPath` parameter to write to a different file. Execution is only logged when the attack commands are run (not when the `-ShowDetails` , `-CheckPrereqs`, `GetPrereqs`, or `-Cleanup` switches are used). Use the `-NoExecutionLog` switch to not write execution details to disk. 
