@@ -30,6 +30,7 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | logFolder | Name of the folder that will be found in the basePath and contains the Runner logs |
 | CustomTag | A string that you want sent with each execution log sent to the SysLog logger  |
 | absb | An optional AMSI bypass script block that will be run before each atomic (Windows Only) |
+| gmsaAccount | A group managed service account to use for renaming the host if required (Windows Only) |
 
 Table of default values:
 
@@ -50,6 +51,7 @@ Table of default values:
 | logFolder | AtomicRunner-Logs | AtomicRunner-Logs |
 | CustomTag |  |  |
 | absb | $null | $null |
+| gmsaAccount | $null | $null |
 
 Example **privateConfig.ps1**
 
