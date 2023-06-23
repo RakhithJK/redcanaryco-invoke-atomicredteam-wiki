@@ -62,6 +62,8 @@ $artConfig | Add-Member -Force -NotePropertyMembers @{
 }
 ```
 
+**Note**: You must start a new PowerShell window for any changes to the **privateConfig **file to take effect.
+
 ## Run Invoke-SetupAtomicRunner
 
 ```powershell
