@@ -3,7 +3,7 @@ To prepare for **offline** installation you should install Atomic Red Team on an
 ## Steps to take from the **online** system:
 
 1) Install Atomic Red Team on the **online** system as shown [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Invoke-AtomicRedTeam#install-execution-framework-and-atomics-folder).
-2) Get the prereqs for all tests so you can copy as many as possible to the **offline** system. Use `Invoke-AtomicTest -All -GetPrereqs` (preferably with AV disabled). You can skip\cancel any of the application installs because those won't copy over to the **offline** system.
+2) Get the prereqs for all tests so you can copy as many as possible to the **offline** system. Use `Invoke-AtomicTest All -GetPrereqs` (preferably with AV disabled). You can skip\cancel any of the application installs because those won't copy over to the **offline** system.
 3) Copy the following 3 directories from the **online** system to the **offline** system:
   * `C:\AtomicRedTeam` folder
   * PowerShell `powershell-yaml` folder (`$HOME\Documents\PowerShell\Modules` or `$env:ProgramFiles\PowerShell\Modules`)
