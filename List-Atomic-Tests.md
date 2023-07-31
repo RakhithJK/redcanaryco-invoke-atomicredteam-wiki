@@ -8,7 +8,7 @@ Use the `-ShowDetailsBrief` switch to list the tests available for a given techn
 # List atomic tests that can be run from the current platform (Windows,Linux,macOS)
 Invoke-AtomicTest T1003 -ShowDetailsBrief
 
-# List all atomic tests regardless of which platform is can be executed from
+# List all atomic tests regardless of which platform it can be executed from
 Invoke-AtomicTest T1003 -ShowDetailsBrief -anyOS
 ```
 
@@ -18,7 +18,7 @@ If you would like to show details for all techniques, you can use "All" as the t
 # List atomic tests that can be run from the current platform (Windows,Linux,macOS)
 Invoke-AtomicTest All -ShowDetailsBrief
 
-# List all atomic tests regardless of which platform is can be executed from
+# List all atomic tests regardless of which platform it can be executed from
 Invoke-AtomicTest -ShowDetailsBrief -anyOS
 ```
 
@@ -32,6 +32,6 @@ Use the `-ShowDetails` switch to show test details, including attack commands, i
 # List atomic tests that can be run from the current platform (Windows,Linux,macOS)
 Invoke-AtomicTest T1003 -ShowDetails
 
-# List all atomic tests regardless of which platform is can be executed from
+# List all atomic tests regardless of which platform it can be executed from
 Invoke-AtomicTest T1003 -ShowDetails -anyOS
 ```
