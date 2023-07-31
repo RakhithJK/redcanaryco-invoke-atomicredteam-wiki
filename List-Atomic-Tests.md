@@ -5,7 +5,11 @@ Now that the execution framework is [installed](https://github.com/redcanaryco/i
 Use the `-ShowDetailsBrief` switch to list the tests available for a given technique number.
 
 ```powershell
+# List atomic tests that can be run from the current platform (Windows,Linux,macOS)
 Invoke-AtomicTest T1003 -ShowDetailsBrief
+
+# List all atomic tests regardless of which platform is can be executed from
+Invoke-AtomicTest T1003 -ShowDetailsBrief -anyOS
 ```
 
 If you would like to show details for all techniques, you can use "All" as the technique number.
@@ -21,5 +25,9 @@ Showing the brief details is an easy way to identify the atomic test number asso
 Use the `-ShowDetails` switch to show test details, including attack commands, input parameters, and prerequisites for a given technique number.
 
 ```powershell
+# List atomic tests that can be run from the current platform (Windows,Linux,macOS)
 Invoke-AtomicTest T1003 -ShowDetails
+
+# List all atomic tests regardless of which platform is can be executed from
+Invoke-AtomicTest T1003 -ShowDetails -anyOS
 ```
