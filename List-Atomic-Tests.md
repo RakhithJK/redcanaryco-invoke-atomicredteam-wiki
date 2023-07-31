@@ -15,7 +15,11 @@ Invoke-AtomicTest T1003 -ShowDetailsBrief -anyOS
 If you would like to show details for all techniques, you can use "All" as the technique number.
 
 ```powershell
+# List atomic tests that can be run from the current platform (Windows,Linux,macOS)
 Invoke-AtomicTest All -ShowDetailsBrief
+
+# List all atomic tests regardless of which platform is can be executed from
+Invoke-AtomicTest -ShowDetailsBrief -anyOS
 ```
 
 Showing the brief details is an easy way to identify the atomic test number associated with each test, which can then be used to specify individual tests to execute.
