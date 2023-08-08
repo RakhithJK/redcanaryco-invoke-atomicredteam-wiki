@@ -25,8 +25,9 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | kickOffDelay | A delay specified as Timespan to sleep before running the atomic |
 | syslogServer | Set this to the name of your syslog server if you want to use the SysLog execution logger |
 | syslogPort | The port for the syslog server (ignored if syslogServer not set) |
-| LoggingModule | The logging module to use the atomic execution logs (e.g. Attire-ExecutionLogger or Syslog-ExecutionLogger |
+| LoggingModule | The logging module to use the atomic execution logs (e.g. Attire-ExecutionLogger, Syslog-ExecutionLogger or WinEvent-ExecutionLogger |
 | verbose | Set to $true for more output in the runner logs |
+| debug | Set to $true for additional output which will be added to a file called all-out-<base hostname>.txt |
 | logFolder | Name of the folder that will be found in the basePath and contains the Runner logs |
 | CustomTag | A string that you want sent with each execution log sent to the SysLog logger  |
 | absb | An optional AMSI bypass script block that will be run before each atomic (Windows Only) |
@@ -48,6 +49,7 @@ Table of default values:
 | syslogPort | 514 | 514 |
 | LoggingModule| Default-ExecutionLogger | Default-ExecutionLogger |
 | verbose | $false | $false |
+| debug| $false | $false |
 | logFolder | AtomicRunner-Logs | AtomicRunner-Logs |
 | CustomTag |  |  |
 | absb | $null | $null |
@@ -59,6 +61,8 @@ Example **privateConfig.ps1**
 $artConfig | Add-Member -Force -NotePropertyMembers @{
   PathToPrivateAtomics = "C:\MyPrivateAtomics\atomics"
   scheduleTimeSpan = New-TimeSpan -Days 1 
+  verbose = $true
+  LoggingModule = "WinEvent-ExecutionLogger"
 }
 ```
 
