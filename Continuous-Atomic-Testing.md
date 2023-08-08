@@ -13,7 +13,7 @@ Install-AtomicRedTeam -getAtomics -Force -noPayloads
 
 There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-AtomicRedTeam\\Public** folder. You can optionally modify any of the default values in this config file by creating a file called **privateConfig.ps1** in the **\<installFolder\>**.
 
-| config variable | description |
+| Configuration Variable | Description |
 |:---:|:---:|
 | PathToInvokeFolder | The folder containing the installed Invoke-AtomicRedTeam folder | 
 | PathToPublicAtomicsFolder | The folder containing the installed atomics folder |
