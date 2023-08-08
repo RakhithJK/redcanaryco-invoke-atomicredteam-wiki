@@ -28,7 +28,7 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | syslogProtocol | The port for the network protocol to use with the syslog server (options are UDP, TCP, TCPwithTLS) |
 | LoggingModule | The logging module to use for the atomic execution logs (e.g. Attire-ExecutionLogger, Syslog-ExecutionLogger or WinEvent-ExecutionLogger |
 | verbose | Set to $true for more output in the runner logs |
-| debug | Set to $true for additional output which will be added to a file called all-out-<base hostname>.txt |
+| debug | Set to $true for additional output which will be added to a file called all-out-\<base hostname\>.txt |
 | logFolder | Name of the folder that will be found in the basePath and contains the Runner logs |
 | CustomTag | A string that you want sent with each execution log sent to the SysLog logger  |
 | absb | An optional AMSI bypass script block that will be run before each atomic (Windows Only) |
