@@ -110,4 +110,8 @@ The Invoke-AtomicRunner function does the following:
 4. Runs the cleanup commands for the atomic
 5. Renames the computer to include the GUID of the next enabled test on the schedule
 
-To do: add notes about the stop file and updating the schedule to add new atomic tests. And add a wiki page on the new syslog logger
+# Runner Logs
+
+Additional logs are added to the **AtomicRunner-logs** folder in the home directory of the current user. Set the `verbose` and `debug` variables to `$true` in your **privateConfi.ps1** file for maximum logging.
+
+To do: add notes about the stop file and updating the schedule to add new atomic tests.
