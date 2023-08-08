@@ -25,6 +25,7 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | kickOffDelay | A delay (specified as a PowerShell Timespan object) to sleep before running the atomic |
 | syslogServer | Set this to the name of your syslog server if you want to use the SysLog execution logger |
 | syslogPort | The port for the syslog server (ignored if syslogServer not set) |
+| syslogProtocol | The port for the network protocol to use with the syslog server (options are UDP, TCP, TCPwithTLS) |
 | LoggingModule | The logging module to use for the atomic execution logs (e.g. Attire-ExecutionLogger, Syslog-ExecutionLogger or WinEvent-ExecutionLogger |
 | verbose | Set to $true for more output in the runner logs |
 | debug | Set to $true for additional output which will be added to a file called all-out-<base hostname>.txt |
@@ -47,6 +48,7 @@ Table of default values:
 | kickOffDelay| 0 minutes | 0 minutes |
 | syslogServer |  |  |
 | syslogPort | 514 | 514 |
+| syslogProtocol | UDP | UDP |
 | LoggingModule| Default-ExecutionLogger | Default-ExecutionLogger |
 | verbose | $false | $false |
 | debug| $false | $false |
