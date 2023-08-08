@@ -22,7 +22,7 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | basePath | The path where you want the folder created that houses the logs and the runner schedule. |
 | scheduleTimeSpan | The time span in which you want all of the atomics on your schedule to complete. |
 | scheduleFileName | The name of the csv file containing the schedule (list) of atomic tests to run. |
-| kickOffDelay | A delay specified as Timespan to sleep before running the atomic |
+| kickOffDelay | A delay (specified as a PowerShell Timespan object) to sleep before running the atomic |
 | syslogServer | Set this to the name of your syslog server if you want to use the SysLog execution logger |
 | syslogPort | The port for the syslog server (ignored if syslogServer not set) |
 | LoggingModule | The logging module to use for the atomic execution logs (e.g. Attire-ExecutionLogger, Syslog-ExecutionLogger or WinEvent-ExecutionLogger |
