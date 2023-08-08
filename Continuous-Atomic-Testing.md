@@ -25,7 +25,7 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | kickOffDelay | A delay specified as Timespan to sleep before running the atomic |
 | syslogServer | Set this to the name of your syslog server if you want to use the SysLog execution logger |
 | syslogPort | The port for the syslog server (ignored if syslogServer not set) |
-| LoggingModule | The logging module to use the atomic execution logs (e.g. Attire-ExecutionLogger, Syslog-ExecutionLogger or WinEvent-ExecutionLogger |
+| LoggingModule | The logging module to use for the atomic execution logs (e.g. Attire-ExecutionLogger, Syslog-ExecutionLogger or WinEvent-ExecutionLogger |
 | verbose | Set to $true for more output in the runner logs |
 | debug | Set to $true for additional output which will be added to a file called all-out-<base hostname>.txt |
 | logFolder | Name of the folder that will be found in the basePath and contains the Runner logs |
@@ -114,4 +114,15 @@ The Invoke-AtomicRunner function does the following:
 
 Additional logs are added to the **AtomicRunner-logs** folder in the home directory of the current user. Set the `verbose` and `debug` variables to `$true` in your **privateConfi.ps1** file for maximum logging.
 
-To do: add notes about the stop file and updating the schedule to add new atomic tests.
+# Refresh the Schedule
+
+As new atomics are added, removed, or edited in the Atomic Red team library, you may want to refresh your schedule. Refreshing the schedule will update the Atomic test name, technique and supported platforms for each test on the schedule, remove entries for atomic tests that have been removed, and add any new tests that aren't already on your schedule. Any new tests added to the schedule will be disabled by default, change the **enabled** value to True if you want it to be active.
+
+```powershell
+# This will refresh the CSV schedule found in the user's home directory at AtomicRunner\AtomicRunnerSchedule.csv
+Invoke-RefreshSchedule
+```
+
+# Stop the Runner
+
+A simple way to stop the atomic runner from it's continuous execution of atomics and rebooting you can simply add txt file called "stop" in the **AtomicRunner** folder. You can find the **AtomicRunner** folder in the `basePath` defined above, which is the current user's profile by default.
