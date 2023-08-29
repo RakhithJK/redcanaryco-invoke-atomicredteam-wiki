@@ -57,7 +57,7 @@ As new atomics are added, removed, or edited in the Atomic Red team library, you
 
 ```powershell
 # This will refresh the CSV schedule found in the user's home directory at AtomicRunner\AtomicRunnerSchedule.csv
-Invoke-RefreshSchedule
+Invoke-RefreshExistingSchedule
 ```
 
 # Runner Logs
