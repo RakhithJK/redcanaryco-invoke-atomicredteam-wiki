@@ -9,6 +9,9 @@ This script works for Windows, Linux and macOS. You need to have PowerShell Core
 IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
 Install-AtomicRedTeam -getAtomics -Force -noPayloads
 ```
+
+Note (Windows Only): Your Local Security Policy (Security Settings -> Local Polices -> Security Option) "Network Access: Do not allow storage of passwords and credentials for network authentication" must be disabled on your Atomic Runner to allow the scheduled task to be created.
+
 ## Set Custom Config using privateConfig.ps1
 
 There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-AtomicRedTeam\\Public** folder. You can optionally modify any of the default values in this config file by creating a file called **privateConfig.ps1** in the **\<installFolder\>**.
