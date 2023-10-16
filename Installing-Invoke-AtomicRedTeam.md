@@ -2,8 +2,8 @@ This execution framework (Invoke-AtomicRedTeam) works cross-platform on Windows,
 
 An alternative to installing Atomic Red Team on your device is to use it inside of a Docker container or the Windows Sandbox where it is already pre-installed.
 
-[Docker container with Atomic Red Team Installed](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Docker-Containers)
-[Windows Sandbox with Atomic Red Team Installed](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Windows-Sandbox)
+* [Docker container with Atomic Red Team Installed](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Docker-Containers)
+* [Windows Sandbox with Atomic Red Team Installed](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Windows-Sandbox)
 
 **Minimum supported PowerShell version is 5.0**
 
