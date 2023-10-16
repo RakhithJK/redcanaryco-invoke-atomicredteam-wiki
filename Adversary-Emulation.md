@@ -27,6 +27,18 @@ Invoke-AtomicRunner -listOfAtomics .\IcedID.csv
 # This will run each the cleanup commands for each of the atomic tests on the schedule
 Invoke-AtomicRunner -listOfAtomics .\IcedID.csv -Cleanup
 ```
+If you would like to pause between the execution of each atomic on the schedule, you can use the `-PauseBetweenAtomics` parameter to specify the number of seconds to wait between each execution. Specify 0 if you want to be prompted to press any key to resume execution.
+
+```powershell
+# Pause 5 seconds before executing the next atomic on the list of atomics.
+Invoke-AtomicRunner -listOfAtomics .\IcedID.csv -PauseBetweenAtomics 5
+```
+
+```powershell
+# Stop execution after each atomic, resume execution when any key is pressed
+Invoke-AtomicRunner -listOfAtomics .\IcedID.csv -PauseBetweenAtomics 0
+```
+
 
 # Setup and Configuration
 ## Install Atomic Red Team and Invoke-AtomicRedTeam
@@ -35,6 +47,7 @@ Invoke-AtomicRunner -listOfAtomics .\IcedID.csv -Cleanup
 IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
 Install-AtomicRedTeam -getAtomics -Force -noPayloads
 ```
+
 ## Create the CSV Schedule
 
 To automatically create a CSV file of the right format, containing all the atomic tests in your atomics folder, use the **Invoke-GenerateNewSchedule** command.
