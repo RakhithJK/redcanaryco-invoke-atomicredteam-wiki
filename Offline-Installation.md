@@ -13,5 +13,5 @@ Note: It is recommended that you add an AV exclusion for the `C:\AtomicRedTeam` 
 
 ## Steps to take from the **offline** system:
 
-1.  Make sure the file paths of the 3 folders are the same on the **offline** system as the **online**. You should have a `c:\AtomicRedTeam` folder with two folders in it (`atomics` and `invoke-atomicredteam`). You should have a `powershell-yaml` folder at `$HOME\Documents\PowerShell\Modules` or `$env:ProgramFiles\PowerShell\Modules`
+1.  Make sure the file paths of the folders are the same on the **offline** system as the **online**. You should have a `C:\AtomicRedTeam` folder with three folders in it (`atomics`,`ExternalPayloads`, and `invoke-atomicredteam`). You should have a `powershell-yaml` folder at `$HOME\Documents\PowerShell\Modules` or `$env:ProgramFiles\PowerShell\Modules`
 2) Import the Invoke-AtomicRedTeam module as described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Import-the-Module).
