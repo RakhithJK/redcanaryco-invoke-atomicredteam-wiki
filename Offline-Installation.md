@@ -8,6 +8,7 @@ To prepare for **offline** installation you should install Atomic Red Team on an
   * `C:\AtomicRedTeam` folder
   * PowerShell `powershell-yaml` folder (from `$HOME\Documents\PowerShell\Modules` or `$env:ProgramFiles\PowerShell\Modules`)
   * If you are using the non-default [Syslog Execution logger](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Logging#syslog-logger) you will need to grab a copy of the `Posh-SYSLOG` module in the same way you grabbed the `powershell-yaml` module.
+
 Note: We are in the process of standardizing atomics that have external dependencies to download them into the `AtomicRedTeam\ExternalPayloads` folder. This has be completed for the Windows atomics but not the Linux\macOS atomics. In the latter case, you may need to grab several of the prereqs from the `temp` directory.
 
 Note: It is recommended that you add an AV exclusion for the `C:\AtomicRedTeam` folder so that no files from the project are quarantined or deleted.
