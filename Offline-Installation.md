@@ -15,6 +15,6 @@ Note: It is recommended that you add an AV exclusion for the `C:\AtomicRedTeam` 
 
 ## Steps to take from the **offline** system:
 
-1.  Make sure the file paths of the folders are the same on the **offline** system as the **online**. You should have a `C:\AtomicRedTeam` folder with three folders in it (`atomics`,`ExternalPayloads`, and `invoke-atomicredteam`). You should have a `powershell-yaml` folder at `$HOME\Documents\PowerShell\Modules` or `$env:ProgramFiles\PowerShell\Modules`
+1.  After copying the `C:\AtomicRedTeam` folder and the PowerShell module folder(s) from the **online** system to the **offline** system, dmke sure the file paths of the folders are the same on the **offline** system as the **online**. You should have a `C:\AtomicRedTeam` folder with three folders in it (`atomics`,`ExternalPayloads`, and `invoke-atomicredteam`). You should have a `powershell-yaml` folder at `$HOME\Documents\PowerShell\Modules` or `$env:ProgramFiles\PowerShell\Modules`
 2) Import the Invoke-AtomicRedTeam module as described [here](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Import-the-Module).
 3) From an administrative PowerShell prompt run `Invoke-AtomicTest All -GetPrereqs` which will set any configurations or install prerequisite software onto your **offline** system. For example, the Wireshark executable will have been downloaded as a prereq that you copied to the **offline** system but you still need to install it on the **offline** system.
