@@ -7,7 +7,7 @@ To prepare for **offline** installation you should install Atomic Red Team on an
 3) Copy the following 3 directories from the **online** system to the **offline** system:
   * `C:\AtomicRedTeam` folder
   * PowerShell `powershell-yaml` folder (`$HOME\Documents\PowerShell\Modules` or `$env:ProgramFiles\PowerShell\Modules`)
-  * The files in the `temp` directory (where several of the downloaded prereqs will be found) 
+  * We are in the process of standardizing atomics that have external dependencies to download them into the AtomicRedTeam\ExternalPayloads folder. This has be completed for the Windows atomics but not the Linux\macOS atomics. In the latter case, you may need to grab several of the prereqs from the `temp` directory.
 
 Note: It is recommended that you add an AV exclusion for the `C:\AtomicRedTeam` folder so that no files from the project are quarantined or deleted.
 
