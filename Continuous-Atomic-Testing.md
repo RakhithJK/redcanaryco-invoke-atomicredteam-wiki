@@ -131,13 +131,3 @@ Invoke-RefreshExistingSchedule
 # Stop the Runner
 
 A simple way to stop the atomic runner from it's continuous execution of atomics and rebooting you can simply add txt file called "stop" in the **AtomicRunner** folder. You can find the **AtomicRunner** folder in the `basePath` defined above, which is the current user's profile by default.
-
-# Atomic Runner Hooks
-Users can define 4 different functions that will be called (if they exist) before/after atomic execution or before/after atomic test cleanup commands (only applies when calling Invoke-AtomicRunner):
-
-1. Invoke-AtomicRunnerPreAtomicHook
-1. Invoke-AtomicRunnerPostAtomicHook
-1. Invoke-AtomicRunnerPreAtomicCleanupHook
-1. Invoke-AtomicRunnerPostAtomicCleanupHook
-
-See [here](https://github.com/clr2of8/AtomicRunnerHooks) for an example PowerShell module where you can provide the code to run for each of these hooks.
