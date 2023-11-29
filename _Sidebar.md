@@ -9,6 +9,7 @@
 * [Execution Logging](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Logging)
 * [Adversary Emulation](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Adversary-Emulation)
 * [Continuous Atomic Testing](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Continuous-Atomic-Testing)
+* [Execution Hooks](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Hooks)
 * [Helper Functions](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Helper-Functions)
 * [The Atomic GUI](https://github.com/redcanaryco/invoke-atomicredteam/wiki/The-Atomic-GUI)
 * [Uninstallation](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Uninstallation)
