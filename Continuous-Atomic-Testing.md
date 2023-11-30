@@ -109,11 +109,11 @@ The KickOff-AtomicRunner scheduled task (or cronjob on Linux/macOS) calls the In
 # The Invoke-AtomicRunner Function
 
 The Invoke-AtomicRunner function does the following:
-1. Parses the Atomic GUID from the end of the computer hostname to know which atomic test it should run. If no GUID is found, it assumes it should run first atomic test enabled on the schedule.
+1. Parses the Atomic GUID from the end of the computer hostname to know which atomic test it should run. If no GUID is found, it assumes it should run the first atomic test enabled on the schedule
 2. Executes the atomic test specified by the GUID
-3. Sleeps for an amount of time calculated by the **scheduleTimeSpan** and the number of atomic tests enabled on the schedule
+3. Sleeps for an amount of time calculated from the **scheduleTimeSpan** and the number of atomic tests enabled on the schedule
 4. Runs the cleanup commands for the atomic
-5. Renames the computer to include the GUID of the next enabled test on the schedule
+5. Renames the computer to include the GUID of the next enabled test on the schedule and then reboots the computer
 
 # Runner Logs
 
