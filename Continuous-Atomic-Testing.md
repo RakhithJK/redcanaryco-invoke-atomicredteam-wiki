@@ -92,7 +92,7 @@ The setup script does the following:
 
 ## Enable Atomic Tests on the Schedule File
 
-Edit the schedule file to enable some atomics to run (these will all run every X minutes as calculated using the **scheduleTimeSpan** and the number of atomic tests enabled on your schedule). By default, the schedule will be located at **<user-home-dir>\AtomicRunner\AtomcRunnerSchedule.csv**
+Edit the schedule file to enable some atomics to run (these will all run every X minutes as calculated using the **scheduleTimeSpan** and the number of atomic tests enabled on your schedule). By default, the schedule will be located at **\<user-home-dir\>\AtomicRunner\AtomcRunnerSchedule.csv**
 
 Example **AtomicRunnerSchedule.csv** files are found [here](https://github.com/clr2of8/AttackEmulationTools/tree/main/Samples/Emulations).
 
