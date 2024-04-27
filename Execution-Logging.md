@@ -18,7 +18,11 @@ Invoke-AtomicTest T1218.010 -ExecutionLogPath 'C:\Temp\mylog.csv'
 The execution log records test name and number, execution time, user, and hostname. It does not include the output seen on the screen when you run the test. The following PowerShell command provides a convenient view of the execution log.
 
 ```powershell
-Import-Csv $env:TEMP\Invoke-AtomicTest-ExecutionLog.csv | Out-GridView
+Import-Csv $env:TEMP\Invoke-AtomicTest-ExecutionLog.csv | Out-GridView # Windows
+```
+
+```powershell
+Import-Csv /tmp/Invoke-AtomicTest-ExecutionLog.csv | FT # Linux
 ```
 
 #### Execution Log Example
