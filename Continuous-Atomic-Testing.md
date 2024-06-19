@@ -84,10 +84,10 @@ Invoke-SetupAtomicRunner
 Invoke-SetupAtomicRunner -SkipServiceSetup
 
 # If you want to specify an alternative directory for the service install (default is the System32 directory)
-Invoke-SetupAtomicRunner -SkipServiceSetup
+Invoke-SetupAtomicRunner -ServiceInstallDir "C:\Temp"
 
 # If you prefer to use a Scheduled Task instead of a service for the continuous execution of atomics
-Invoke-SetupAtomicRunner -ServiceInstallDir "C:\Temp"
+Invoke-SetupAtomicRunner -asScheduledTask
 ```
 Note: On Windows, you will be prompted to enter the credentials of the user that will be running the atomics.
 
