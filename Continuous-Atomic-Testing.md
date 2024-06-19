@@ -33,6 +33,7 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | logFolder | Name of the folder that will be found in the basePath and contains the Runner logs |
 | CustomTag | A string that you want sent with each execution log sent to the SysLog logger  |
 | absb | An optional AMSI bypass script block that will be run before each atomic (Windows Only) |
+| ServiceInstallDir | The directory to run the atomicrunnerservice executable from (Windows Only) |
 
 Table of default values:
 
@@ -55,6 +56,7 @@ Table of default values:
 | logFolder | AtomicRunner-Logs | AtomicRunner-Logs |
 | CustomTag |  |  |
 | absb | $null | $null |
+| ServiceInstallDir | "${ENV:windir}\System32" | |
 
 Example **privateConfig.ps1**
 
@@ -81,8 +83,11 @@ Invoke-SetupAtomicRunner
 # If you want to skip the setup of the atomicrunnerservice during the setup (because you've already set it up and don't want to enter the user password again)
 Invoke-SetupAtomicRunner -SkipServiceSetup
 
+# If you want to specify an alternative directory for the service install (default is the System32 directory)
+Invoke-SetupAtomicRunner -SkipServiceSetup
+
 # If you prefer to use a Scheduled Task instead of a service for the continuous execution of atomics
-Invoke-SetupAtomicRunner -asScheduledtask
+Invoke-SetupAtomicRunner -ServiceInstallDir "C:\Temp"
 ```
 Note: On Windows, you will be prompted to enter the credentials of the user that will be running the atomics.
 
@@ -138,4 +143,8 @@ Invoke-RefreshExistingSchedule
 
 # Stop the Runner
 
-A simple way to stop the atomic runner from it's continuous execution of atomics and rebooting you can simply add txt file called "stop" in the **AtomicRunner** folder. You can find the **AtomicRunner** folder in the `basePath` defined above, which is the current user's profile by default.
+A simple way to stop the atomic runner from it's continuous execution of atomics and rebooting you can simply add txt file called "stop" in the **AtomicRunner** folder. You can find the **AtomicRunner** folder in the `basePath` defined above, which is the current user's profile by default. Another way is to delete the associated service, scheduled task or cron job. To temporarily stop the atomicrunnerservice on Windows, you can execute the following from an elevated command prompt.
+
+```powershell
+atomicrunnerservice -stop
+```
