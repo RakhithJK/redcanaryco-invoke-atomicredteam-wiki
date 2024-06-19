@@ -10,8 +10,6 @@ IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/mas
 Install-AtomicRedTeam -getAtomics -Force -noPayloads
 ```
 
-Note (Windows Only): Your Local Security Policy (Security Settings -> Local Polices -> Security Option) "Network Access: Do not allow storage of passwords and credentials for network authentication" must be disabled on your Atomic Runner to allow the scheduled task to be created.
-
 ## Set Custom Config using privateConfig.ps1
 
 There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-AtomicRedTeam\\Public** folder. You can optionally modify any of the default values in this config file by creating a file called **privateConfig.ps1** in the **\<installFolder\>**.
@@ -35,7 +33,6 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | logFolder | Name of the folder that will be found in the basePath and contains the Runner logs |
 | CustomTag | A string that you want sent with each execution log sent to the SysLog logger  |
 | absb | An optional AMSI bypass script block that will be run before each atomic (Windows Only) |
-| gmsaAccount | A group managed service account to use for renaming the host if required (Windows Only) |
 
 Table of default values:
 
@@ -58,7 +55,6 @@ Table of default values:
 | logFolder | AtomicRunner-Logs | AtomicRunner-Logs |
 | CustomTag |  |  |
 | absb | $null | $null |
-| gmsaAccount | $null | $null |
 
 Example **privateConfig.ps1**
 
@@ -75,20 +71,32 @@ $artConfig | Add-Member -Force -NotePropertyMembers @{
 
 ## Run Invoke-SetupAtomicRunner
 
+Note: On macOS and Linux, a cronjob will be used for unattended running of atomics. On Windows, a service will be used by default but you can optionally choose to set it up as a scheduled task as described below.
+
 ```powershell
 # Run Invoke-SetupAtomicRunner as the runner user (from admin prompt)
+# This will prompt you for the user password, which it will use to install the atomicrunnerservice
 Invoke-SetupAtomicRunner
+
+# If you want to skip the setup of the atomicrunnerservice during the setup (because you've already set it up and don't want to enter the user password again)
+Invoke-SetupAtomicRunner -SkipServiceSetup
+
+# If you prefer to use a Scheduled Task instead of a service for the continuous execution of atomics
+Invoke-SetupAtomicRunner -asScheduledtask
 ```
 Note: On Windows, you will be prompted to enter the credentials of the user that will be running the atomics.
 
 The setup script does the following:
 
-1. If you configured a group managed service account (gMSA) for renaming the computer, a JEA endpoint will be created for renaming the computer using the gMSA account.
-2. Creates a scheduled task called `KickOff-AtomicRunner` to keep the Runner running after a restart (or a cron job on Linux/macOS)
+1. Creates a service called `atomicrunnerservice` (default) or a scheduled task called `KickOff-AtomicRunner` to keep the Runner running after a restart (or a cron job on Linux/macOS)
 3. Adds an Import-Module statement to your PowerShell profile to load Invoke-AtomicRedTeam.psd1 automatically
-4. Installs the Posh-SYSLOG module it is missing and you are configured to use it.
+4. Installs the Posh-SYSLOG module if it is missing and you are configured to use it.
 5. Creates a CSV schedule file listing all of the atomics in your atomics folders (public and private). All atomics will be **disabled** by default.
 6. Runs the **get_prereqs** commands for all atomic tests that are **enabled** (active) on the schedule.
+
+Note (Windows Only): 
+* If using the Windows Service - The user must have the "Log on as a service" right. To add that right, open the Local Security Policy management console, go to the `\Security Settings\Local Policies\User Rights Assignments` folder, and edit the "Log on as a service" policy there
+* If using the Windows Scheduled Task -Your Local Security Policy (Security Settings -> Local Polices -> Security Option) "Network Access: Do not allow storage of passwords and credentials for network authentication" must be disabled on your Atomic Runner to allow the scheduled task to be created.
 
 ## Enable Atomic Tests on the Schedule File
 
