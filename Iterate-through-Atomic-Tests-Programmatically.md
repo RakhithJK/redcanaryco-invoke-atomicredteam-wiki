@@ -1,3 +1,5 @@
+These examples assume you have already [installed the Invoke-AtomicRedTeam execution framework](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Installing-Invoke-AtomicRedTeam).
+
 ## Count the Number of Atomic Tests per Platform
 
 ```Powershell
