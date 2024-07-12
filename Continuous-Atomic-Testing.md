@@ -28,6 +28,7 @@ There is a config file called **config.ps1** in the **\<installFolder\>\\Invoke-
 | syslogPort | The port for the syslog server (ignored if syslogServer not set) |
 | syslogProtocol | The port for the network protocol to use with the syslog server (options are UDP, TCP, TCPwithTLS) |
 | LoggingModule | The logging module to use for the atomic execution logs (e.g. Attire-ExecutionLogger, Syslog-ExecutionLogger or WinEvent-ExecutionLogger |
+| logFileName| The file name to use for the atomic execution logs, including the file extension (log will be written to the folder specified by `logFolder` |
 | verbose | Set to $true for more output in the runner logs |
 | debug | Set to $true for additional output which will be added to a file called all-out-\<base hostname\>.txt |
 | logFolder | Name of the folder that will be found in the basePath and contains the Runner logs |
@@ -51,6 +52,7 @@ Table of default values:
 | syslogPort | 514 | 514 |
 | syslogProtocol | UDP | UDP |
 | LoggingModule| Default-ExecutionLogger | Default-ExecutionLogger |
+| logFileName| <Local TimeStamp>_<Base Hostname)-ExecLog.csv | <Local TimeStamp>_<Base Hostname)-ExecLog.csv |
 | verbose | $false | $false |
 | debug| $false | $false |
 | logFolder | AtomicRunner-Logs | AtomicRunner-Logs |
