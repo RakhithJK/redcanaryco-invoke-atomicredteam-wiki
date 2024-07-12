@@ -67,7 +67,8 @@ $artConfig | Add-Member -Force -NotePropertyMembers @{
   PathToPrivateAtomics = "C:\MyPrivateAtomics\atomics"
   scheduleTimeSpan = New-TimeSpan -Days 1 
   verbose = $true
-  LoggingModule = "WinEvent-ExecutionLogger"
+  LoggingModule = 'Attire-ExecutionLogger'
+  logFileName = "timestamp.json"
 }
 ```
 
